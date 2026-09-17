@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { t } from "@/lib/messages";
 import type { Locale } from "@/lib/i18n";
 
-type Variant = "athlete" | "coach";
+type Variant = "athlete" | "coach" | "travel";
 
 export function ContactForm({
   locale,
@@ -37,7 +37,9 @@ export function ContactForm({
     const extras =
       variant === "athlete"
         ? `${copy.form.country}: ${String(data.get("country") ?? "")}\n${copy.form.sport}: ${String(data.get("sport") ?? "")}\n${copy.form.phone}: ${String(data.get("phone") ?? "")}`
-        : `${copy.form.institution}: ${String(data.get("institution") ?? "")}\n${copy.form.phone}: ${String(data.get("phone") ?? "")}`;
+        : variant === "travel"
+          ? `${copy.form.team}: ${String(data.get("team") ?? "")}\n${copy.form.sport}: ${String(data.get("sport") ?? "")}\n${copy.form.phone}: ${String(data.get("phone") ?? "")}`
+          : `${copy.form.institution}: ${String(data.get("institution") ?? "")}\n${copy.form.phone}: ${String(data.get("phone") ?? "")}`;
 
     const body = `${copy.form.name}: ${name}\n${copy.form.email}: ${email}\n${extras}\n\n${message}`;
     window.location.href = `mailto:info@athlas.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -63,6 +65,17 @@ export function ContactForm({
           <div className="grid gap-2">
             <Label htmlFor="country">{copy.form.country}</Label>
             <Input id="country" name="country" className="h-10" />
+          </div>
+          <div className="grid gap-2">
+            <Label htmlFor="sport">{copy.form.sport}</Label>
+            <Input id="sport" name="sport" className="h-10" />
+          </div>
+        </>
+      ) : variant === "travel" ? (
+        <>
+          <div className="grid gap-2">
+            <Label htmlFor="team">{copy.form.team}</Label>
+            <Input id="team" name="team" className="h-10" />
           </div>
           <div className="grid gap-2">
             <Label htmlFor="sport">{copy.form.sport}</Label>

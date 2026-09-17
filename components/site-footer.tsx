@@ -42,6 +42,11 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <p className="text-xs font-semibold tracking-[0.16em] text-white/50 uppercase">Athlas</p>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
+              <Link href={localePath(locale, "/travel")} className="text-white/80 hover:text-[#FFC53A]">
+                {copy.nav.travel}
+              </Link>
+            </li>
+            <li>
               <Link href={localePath(locale, "/fundacion")} className="text-white/80 hover:text-[#FFC53A]">
                 {copy.nav.foundation}
               </Link>

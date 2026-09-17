@@ -13,6 +13,7 @@ export const messages = {
       sports: "Becas",
       foundation: "Fundación",
       costaRica: "Costa Rica 2024",
+      travel: "Travel",
       coaches: "Entrenadores",
       faq: "Preguntas frecuentes",
       apply: "Inicia tu proceso",
@@ -182,6 +183,36 @@ export const messages = {
       joinCta:
         "¡No dejes que las finanzas detengan tu sueño! Da el primer paso hacia una beca deportiva con Athlas.",
     },
+    travel: {
+      title: "Athlas Travel",
+      eyebrow: "Un programa distinto",
+      subtitle:
+        "Equipos universitarios y de high school de Estados Unidos viajan a Costa Rica en un viaje a la medida.",
+      different:
+        "Athlas Travel no es el programa de becas y colocación. Es un viaje para equipos que quieren conocer Costa Rica, entrenar juntos y aportar en el terreno.",
+      lead:
+        "El equipo llega con un itinerario hecho a su medida: descubrir el país, actividades de team building, partidos contra equipos locales y voluntariado en Verdiazul con tortugas — y más, según lo que arme el grupo.",
+      custom:
+        "Cada viaje se arma con el entrenador o el staff del equipo. No hay un paquete fijo publicado aquí.",
+      photosLead: "Fotos del taller",
+      photosNote:
+        "Espacios reservados para las fotos del programa. Se van a cargar cuando lleguen.",
+      slotHero: "Foto principal del viaje",
+      slotDiscoverTitle: "Descubrir el país",
+      slotDiscoverBody:
+        "Tiempo en Costa Rica para que el equipo conozca el país, no solo la cancha.",
+      slotTeamTitle: "Team building",
+      slotTeamBody: "Actividades de team building pensadas para el grupo que viaja.",
+      slotPlayTitle: "Jugar contra equipos locales",
+      slotPlayBody: "Partidos y entrenamiento frente a equipos de Costa Rica.",
+      slotTurtlesTitle: "Voluntariado en Verdiazul",
+      slotTurtlesBody:
+        "Trabajo voluntario con tortugas en Verdiazul, y el resto del itinerario que se sume al viaje.",
+      inquireTitle: "Armar un viaje",
+      inquireLead:
+        "Escribe a info@athlas.org con el nombre del equipo, el deporte y las fechas que tienen en mente.",
+      inquireCta: "Escribir a info@athlas.org",
+    },
     coaches: {
       title: "Para entrenadores",
       p1: "Buscamos instituciones educativas y reclutadores que buscan identificar y conectar con jóvenes atletas talentosos de todo el mundo.",
@@ -204,6 +235,7 @@ export const messages = {
       country: "País",
       sport: "Deporte",
       institution: "Institución",
+      team: "Equipo o escuela",
       message: "Mensaje",
       submit: "Enviar a info@athlas.org",
       required: "Obligatorio",
@@ -242,6 +274,7 @@ export const messages = {
       sports: "Scholarships",
       foundation: "Foundation",
       costaRica: "Costa Rica 2024",
+      travel: "Travel",
       coaches: "Coaches",
       faq: "FAQ",
       apply: "Start your process",
@@ -412,6 +445,35 @@ export const messages = {
       joinCta:
         "Don't let finances stop your dream. Take the first step toward a sports scholarship with Athlas.",
     },
+    travel: {
+      title: "Athlas Travel",
+      eyebrow: "A different program",
+      subtitle:
+        "US university and high school sports teams come to Costa Rica on a custom trip.",
+      different:
+        "Athlas Travel is not the scholarship and placement program. It is a trip for teams that want to see Costa Rica, train together, and give time on the ground.",
+      lead:
+        "The team arrives on an itinerary built for them: discover the country, do team-building activities, play against local teams, and volunteer at Verdiazul with turtles — and more, depending on what the group puts together.",
+      custom:
+        "Each trip is built with the coach or team staff. There is no fixed package published here.",
+      photosLead: "Workshop photos",
+      photosNote: "Reserved slots for program photos. They will be added when they arrive.",
+      slotHero: "Main trip photo",
+      slotDiscoverTitle: "Discover the country",
+      slotDiscoverBody:
+        "Time in Costa Rica so the team sees the country, not only the field.",
+      slotTeamTitle: "Team building",
+      slotTeamBody: "Team-building activities designed for the group that travels.",
+      slotPlayTitle: "Play against local teams",
+      slotPlayBody: "Games and training against teams in Costa Rica.",
+      slotTurtlesTitle: "Volunteer at Verdiazul",
+      slotTurtlesBody:
+        "Volunteer work with turtles at Verdiazul, plus whatever else is added to that trip.",
+      inquireTitle: "Plan a trip",
+      inquireLead:
+        "Email info@athlas.org with the team name, sport, and the dates you have in mind.",
+      inquireCta: "Email info@athlas.org",
+    },
     coaches: {
       title: "For coaches",
       p1: "We seek coaches and recruiters looking to identify and connect with talented young athletes from around the world.",
@@ -434,6 +496,7 @@ export const messages = {
       country: "Country",
       sport: "Sport",
       institution: "Institution",
+      team: "Team or school",
       message: "Message",
       submit: "Send to info@athlas.org",
       required: "Required",

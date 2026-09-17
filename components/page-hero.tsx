@@ -7,19 +7,21 @@ export function PageHero({
 }: {
   title: string;
   subtitle?: string;
-  image: string;
+  image?: string;
 }) {
   return (
     <section className="relative isolate overflow-hidden bg-[#1c1b4a] text-white">
-      <Image
-        src={image}
-        alt=""
-        fill
-        priority
-        className="object-cover opacity-35"
-        sizes="100vw"
-      />
-      <div className="absolute inset-0 bg-[#1c1b4a]/55" />
+      {image ? (
+        <Image
+          src={image}
+          alt=""
+          fill
+          priority
+          className="object-cover opacity-35"
+          sizes="100vw"
+        />
+      ) : null}
+      <div className={`absolute inset-0 ${image ? "bg-[#1c1b4a]/55" : "bg-[#1c1b4a]"}`} />
       <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
         <h1 className="font-heading max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
           {title}

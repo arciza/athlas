@@ -21,6 +21,7 @@ function navItems(locale: Locale) {
   return [
     { href: localePath(locale, "/#como-funciona"), label: copy.nav.how },
     { href: localePath(locale, "/becas"), label: copy.nav.sports },
+    { href: localePath(locale, "/travel"), label: copy.nav.travel },
     { href: localePath(locale, "/fundacion"), label: copy.nav.foundation },
     { href: localePath(locale, "/donaciones-costarica"), label: copy.nav.costaRica },
     { href: localePath(locale, "/entrenadores"), label: copy.nav.coaches },
@@ -40,7 +41,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-[#36348E] text-white">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <BrandLogo locale={locale} inverted />
-        <nav className="hidden items-center gap-5 lg:flex">
+        <nav className="hidden items-center gap-3 xl:gap-5 lg:flex">
           {items.map((item) => (
             <Link
               key={item.href}
