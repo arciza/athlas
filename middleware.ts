@@ -14,13 +14,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  if (pathname === "/es" || pathname.startsWith("/es/")) {
-    const url = request.nextUrl.clone();
-    url.pathname = pathname.replace(/^\/es/, "") || "/";
-    return NextResponse.redirect(url);
-  }
-
-  if (pathname === "/en" || pathname.startsWith("/en/")) {
+  if (
+    pathname === "/en" ||
+    pathname.startsWith("/en/") ||
+    pathname === "/es" ||
+    pathname.startsWith("/es/")
+  ) {
     return NextResponse.next();
   }
 
