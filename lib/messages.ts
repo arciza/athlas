@@ -161,7 +161,7 @@ export const messages = {
         "¡Únete a nosotros en este emocionante viaje y sé parte de hacer realidad los sueños de estos talentosos atletas!",
       donateCta: "Escribir a info@athlas.org",
       donateNote:
-        "El formulario de donación de WordPress/GiveWP no forma parte de este sitio. Para donar, escribe a info@athlas.org.",
+        "Para donar, escribe a info@athlas.org. El checkout de donaciones del sitio anterior no está en esta versión.",
     },
     costaRica: {
       title: "Donaciones – Costa Rica 2024",
@@ -391,7 +391,7 @@ export const messages = {
         "Join us on this exciting journey and be part of making these talented athletes' dreams come true!",
       donateCta: "Email info@athlas.org",
       donateNote:
-        "The WordPress/GiveWP donation checkout is not part of this site. To donate, email info@athlas.org.",
+        "To donate, email info@athlas.org. The previous site’s donation checkout is not on this version.",
     },
     costaRica: {
       title: "Donations – Costa Rica 2024",
