@@ -1,13 +1,16 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 
 export function PageHero({
   title,
   subtitle,
   image,
+  action,
 }: {
   title: string;
   subtitle?: string;
   image?: string;
+  action?: ReactNode;
 }) {
   return (
     <section className="relative isolate overflow-hidden bg-[#1c1b4a] text-white">
@@ -27,6 +30,7 @@ export function PageHero({
           {title}
         </h1>
         {subtitle ? <p className="mt-4 max-w-2xl text-lg text-white/85">{subtitle}</p> : null}
+        {action ? <div className="mt-8">{action}</div> : null}
       </div>
     </section>
   );
