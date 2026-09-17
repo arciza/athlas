@@ -194,10 +194,6 @@ export const messages = {
         "El equipo llega con un itinerario hecho a su medida: descubrir el país, actividades de team building, partidos contra equipos locales y voluntariado en Verdiazul con tortugas — y más, según lo que arme el grupo.",
       custom:
         "Cada viaje se arma con el entrenador o el staff del equipo. No hay un paquete fijo publicado aquí.",
-      photosLead: "Fotos del taller",
-      photosNote:
-        "Espacios reservados para las fotos del programa. Se van a cargar cuando lleguen.",
-      slotHero: "Foto principal del viaje",
       slotDiscoverTitle: "Descubrir el país",
       slotDiscoverBody:
         "Tiempo en Costa Rica para que el equipo conozca el país, no solo la cancha.",
@@ -208,6 +204,12 @@ export const messages = {
       slotTurtlesTitle: "Voluntariado en Verdiazul",
       slotTurtlesBody:
         "Trabajo voluntario con tortugas en Verdiazul, y el resto del itinerario que se sume al viaje.",
+      captionSurfBoards: "El equipo en fila con las tablas.",
+      captionSurfLesson: "Clase de surf en la arena.",
+      captionSurfPractice: "Práctica de pop-up sobre las tablas.",
+      captionSurfing: "En el agua.",
+      captionTurtleBriefing: "Charla en Verdiazul.",
+      captionBeachLine: "El grupo en la playa en Verdiazul.",
       inquireTitle: "Armar un viaje",
       inquireLead:
         "Escribe a info@athlas.org con el nombre del equipo, el deporte y las fechas que tienen en mente.",
@@ -456,9 +458,6 @@ export const messages = {
         "The team arrives on an itinerary built for them: discover the country, do team-building activities, play against local teams, and volunteer at Verdiazul with turtles — and more, depending on what the group puts together.",
       custom:
         "Each trip is built with the coach or team staff. There is no fixed package published here.",
-      photosLead: "Workshop photos",
-      photosNote: "Reserved slots for program photos. They will be added when they arrive.",
-      slotHero: "Main trip photo",
       slotDiscoverTitle: "Discover the country",
       slotDiscoverBody:
         "Time in Costa Rica so the team sees the country, not only the field.",
@@ -469,6 +468,12 @@ export const messages = {
       slotTurtlesTitle: "Volunteer at Verdiazul",
       slotTurtlesBody:
         "Volunteer work with turtles at Verdiazul, plus whatever else is added to that trip.",
+      captionSurfBoards: "The team lined up with boards.",
+      captionSurfLesson: "Surf lesson on the sand.",
+      captionSurfPractice: "Pop-up practice on the boards.",
+      captionSurfing: "In the water.",
+      captionTurtleBriefing: "Briefing at Verdiazul.",
+      captionBeachLine: "The group on the beach at Verdiazul.",
       inquireTitle: "Plan a trip",
       inquireLead:
         "Email info@athlas.org with the team name, sport, and the dates you have in mind.",

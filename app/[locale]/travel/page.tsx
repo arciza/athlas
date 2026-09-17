@@ -1,8 +1,25 @@
+import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
-import { PhotoSlot } from "@/components/photo-slot";
 import { t } from "@/lib/messages";
 import { getLocale } from "@/lib/params";
+
+function TravelPhoto({
+  src,
+  caption,
+}: {
+  src: string;
+  caption: string;
+}) {
+  return (
+    <figure className="overflow-hidden rounded-2xl bg-[#FAFAFA]">
+      <div className="relative aspect-[3/4]">
+        <Image src={src} alt={caption} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+      </div>
+      <figcaption className="px-4 py-3 text-sm leading-6 text-[#292929]/75">{caption}</figcaption>
+    </figure>
+  );
+}
 
 export default async function TravelPage({
   params,
@@ -11,7 +28,6 @@ export default async function TravelPage({
 }) {
   const locale = await getLocale(params);
   const copy = t(locale);
-  const eyebrow = copy.travel.photosLead;
 
   return (
     <>
@@ -26,38 +42,38 @@ export default async function TravelPage({
           <p>{copy.travel.custom}</p>
         </div>
 
-        <PhotoSlot
-          className="mt-10 min-h-72"
-          eyebrow={eyebrow}
-          label={copy.travel.slotHero}
-          caption={copy.travel.photosNote}
-        />
-
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-8 lg:grid-cols-2">
           <div>
             <h2 className="font-heading text-2xl font-semibold">{copy.travel.slotDiscoverTitle}</h2>
             <p className="mt-3 text-[15px] leading-7 text-[#292929]/80">
               {copy.travel.slotDiscoverBody}
             </p>
-            <PhotoSlot className="mt-5" eyebrow={eyebrow} label={copy.travel.slotDiscoverTitle} />
-          </div>
-          <div>
-            <h2 className="font-heading text-2xl font-semibold">{copy.travel.slotTeamTitle}</h2>
-            <p className="mt-3 text-[15px] leading-7 text-[#292929]/80">{copy.travel.slotTeamBody}</p>
-            <PhotoSlot className="mt-5" eyebrow={eyebrow} label={copy.travel.slotTeamTitle} />
           </div>
           <div>
             <h2 className="font-heading text-2xl font-semibold">{copy.travel.slotPlayTitle}</h2>
             <p className="mt-3 text-[15px] leading-7 text-[#292929]/80">{copy.travel.slotPlayBody}</p>
-            <PhotoSlot className="mt-5" eyebrow={eyebrow} label={copy.travel.slotPlayTitle} />
           </div>
-          <div>
-            <h2 className="font-heading text-2xl font-semibold">{copy.travel.slotTurtlesTitle}</h2>
-            <p className="mt-3 text-[15px] leading-7 text-[#292929]/80">
-              {copy.travel.slotTurtlesBody}
-            </p>
-            <PhotoSlot className="mt-5" eyebrow={eyebrow} label={copy.travel.slotTurtlesTitle} />
-          </div>
+        </div>
+
+        <h2 className="font-heading mt-14 text-2xl font-semibold">{copy.travel.slotTeamTitle}</h2>
+        <p className="mt-3 max-w-3xl text-[15px] leading-7 text-[#292929]/80">{copy.travel.slotTeamBody}</p>
+        <div className="mt-6 grid gap-6 sm:grid-cols-2">
+          <TravelPhoto src="/media/travel/surf-boards.jpg" caption={copy.travel.captionSurfBoards} />
+          <TravelPhoto src="/media/travel/surf-lesson.jpg" caption={copy.travel.captionSurfLesson} />
+          <TravelPhoto src="/media/travel/surf-practice.jpg" caption={copy.travel.captionSurfPractice} />
+          <TravelPhoto src="/media/travel/surfing.jpg" caption={copy.travel.captionSurfing} />
+        </div>
+
+        <h2 className="font-heading mt-14 text-2xl font-semibold">{copy.travel.slotTurtlesTitle}</h2>
+        <p className="mt-3 max-w-3xl text-[15px] leading-7 text-[#292929]/80">
+          {copy.travel.slotTurtlesBody}
+        </p>
+        <div className="mt-6 grid gap-6 sm:grid-cols-2">
+          <TravelPhoto
+            src="/media/travel/turtle-briefing.jpg"
+            caption={copy.travel.captionTurtleBriefing}
+          />
+          <TravelPhoto src="/media/travel/beach-line.jpg" caption={copy.travel.captionBeachLine} />
         </div>
       </section>
 
