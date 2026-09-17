@@ -74,6 +74,14 @@ export default async function TravelPage({
             caption={copy.travel.captionTurtleBriefing}
           />
           <TravelPhoto src="/media/travel/beach-line.jpg" caption={copy.travel.captionBeachLine} />
+          <TravelPhoto
+            src="/media/travel/verdiazul-bin.jpg"
+            caption={copy.travel.captionVerdiazulBin}
+          />
+          <TravelPhoto
+            src="/media/travel/verdiazul-fruit.jpg"
+            caption={copy.travel.captionVerdiazulFruit}
+          />
         </div>
       </section>
 

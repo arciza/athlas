@@ -210,6 +210,8 @@ export const messages = {
       captionSurfing: "En el agua.",
       captionTurtleBriefing: "Charla en Verdiazul.",
       captionBeachLine: "El grupo en la playa en Verdiazul.",
+      captionVerdiazulBin: "Voluntarios con un recipiente en Verdiazul.",
+      captionVerdiazulFruit: "El grupo compartiendo fruta.",
       inquireTitle: "Armar un viaje",
       inquireLead:
         "Escribe a info@athlas.org con el nombre del equipo, el deporte y las fechas que tienen en mente.",
@@ -474,6 +476,8 @@ export const messages = {
       captionSurfing: "In the water.",
       captionTurtleBriefing: "Briefing at Verdiazul.",
       captionBeachLine: "The group on the beach at Verdiazul.",
+      captionVerdiazulBin: "Volunteers with a bin at Verdiazul.",
+      captionVerdiazulFruit: "The group sharing fruit.",
       inquireTitle: "Plan a trip",
       inquireLead:
         "Email info@athlas.org with the team name, sport, and the dates you have in mind.",
