@@ -42,7 +42,8 @@ export function ContactForm({
           : `${copy.form.institution}: ${String(data.get("institution") ?? "")}\n${copy.form.phone}: ${String(data.get("phone") ?? "")}`;
 
     const body = `${copy.form.name}: ${name}\n${copy.form.email}: ${email}\n${extras}\n\n${message}`;
-    window.location.href = `mailto:info@athlas.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const to = variant === "travel" ? "travel@athlas.org" : "info@athlas.org";
+    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setStatus("success");
   }
 
@@ -99,11 +100,11 @@ export function ContactForm({
       ) : null}
       {status === "success" ? (
         <p role="status" className="text-sm text-[#36348E]">
-          {copy.apply.success}
+          {variant === "travel" ? copy.travel.success : copy.apply.success}
         </p>
       ) : null}
       <Button type="submit" className="h-10 bg-[#36348E] text-white hover:bg-[#36348E]/90">
-        {copy.form.submit}
+        {variant === "travel" ? copy.travel.formSubmit : copy.form.submit}
       </Button>
     </form>
   );

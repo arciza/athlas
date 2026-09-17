@@ -185,37 +185,17 @@ export const messages = {
     },
     travel: {
       title: "Athlas Travel",
-      eyebrow: "Un programa distinto",
-      subtitle:
-        "Equipos universitarios y de high school de Estados Unidos viajan a Costa Rica en un viaje a la medida.",
       different:
-        "Athlas Travel no es el programa de becas y colocación. Es un viaje para equipos que quieren conocer Costa Rica, entrenar juntos y aportar en el terreno.",
+        "Athlas Travel es un programa para equipos que quieren conocer Costa Rica, entrenar juntos y aportar al terreno.",
       lead:
-        "El equipo llega con un itinerario hecho a su medida: descubrir el país, actividades de team building, partidos contra equipos locales y voluntariado en Verdiazul con tortugas — y más, según lo que arme el grupo.",
-      custom:
-        "Cada viaje se arma con el entrenador o el staff del equipo. No hay un paquete fijo publicado aquí.",
-      slotDiscoverTitle: "Descubrir el país",
-      slotDiscoverBody:
-        "Tiempo en Costa Rica para que el equipo conozca el país, no solo la cancha.",
+        "El equipo llega con un itinerario hecho a tu medida: descubrir el país, actividades de team building, partidos contra equipos locales, voluntariado en Verdiazul con tortugas y más...",
+      custom: "Cada viaje se arma con el entrenador o el staff del equipo.",
       slotTeamTitle: "Team building",
-      slotTeamBody: "Actividades de team building pensadas para el grupo que viaja.",
-      slotPlayTitle: "Jugar contra equipos locales",
-      slotPlayBody: "Partidos y entrenamiento frente a equipos de Costa Rica.",
-      slotTurtlesTitle: "Voluntariado en Verdiazul",
-      slotTurtlesBody:
-        "Trabajo voluntario con tortugas en Verdiazul, y el resto del itinerario que se sume al viaje.",
-      captionSurfBoards: "El equipo en fila con las tablas.",
-      captionSurfLesson: "Clase de surf en la arena.",
-      captionSurfPractice: "Práctica de pop-up sobre las tablas.",
-      captionSurfing: "En el agua.",
-      captionTurtleBriefing: "Charla en Verdiazul.",
-      captionBeachLine: "El grupo en la playa en Verdiazul.",
-      captionVerdiazulBin: "Voluntarios con un recipiente en Verdiazul.",
-      captionVerdiazulFruit: "El grupo compartiendo fruta.",
-      inquireTitle: "Armar un viaje",
-      inquireLead:
-        "Escribe a info@athlas.org con el nombre del equipo, el deporte y las fechas que tienen en mente.",
-      inquireCta: "Escribir a info@athlas.org",
+      slotTurtlesTitle: "Verdiazul",
+      inquireLead: "Email us para más información.",
+      inquireCta: "travel@athlas.org",
+      formSubmit: "Enviar a travel@athlas.org",
+      success: "Se abrió tu correo con el mensaje listo para enviar a travel@athlas.org.",
     },
     coaches: {
       title: "Para entrenadores",
@@ -451,37 +431,17 @@ export const messages = {
     },
     travel: {
       title: "Athlas Travel",
-      eyebrow: "A different program",
-      subtitle:
-        "US university and high school sports teams come to Costa Rica on a custom trip.",
       different:
-        "Athlas Travel is not the scholarship and placement program. It is a trip for teams that want to see Costa Rica, train together, and give time on the ground.",
+        "Athlas Travel is a program for teams that want to see Costa Rica, train together, and contribute on the ground.",
       lead:
-        "The team arrives on an itinerary built for them: discover the country, do team-building activities, play against local teams, and volunteer at Verdiazul with turtles — and more, depending on what the group puts together.",
-      custom:
-        "Each trip is built with the coach or team staff. There is no fixed package published here.",
-      slotDiscoverTitle: "Discover the country",
-      slotDiscoverBody:
-        "Time in Costa Rica so the team sees the country, not only the field.",
+        "The team arrives with an itinerary built for you: discover the country, team-building activities, games against local teams, volunteering at Verdiazul with turtles, and more...",
+      custom: "Each trip is put together with the coach or the team staff.",
       slotTeamTitle: "Team building",
-      slotTeamBody: "Team-building activities designed for the group that travels.",
-      slotPlayTitle: "Play against local teams",
-      slotPlayBody: "Games and training against teams in Costa Rica.",
-      slotTurtlesTitle: "Volunteer at Verdiazul",
-      slotTurtlesBody:
-        "Volunteer work with turtles at Verdiazul, plus whatever else is added to that trip.",
-      captionSurfBoards: "The team lined up with boards.",
-      captionSurfLesson: "Surf lesson on the sand.",
-      captionSurfPractice: "Pop-up practice on the boards.",
-      captionSurfing: "In the water.",
-      captionTurtleBriefing: "Briefing at Verdiazul.",
-      captionBeachLine: "The group on the beach at Verdiazul.",
-      captionVerdiazulBin: "Volunteers with a bin at Verdiazul.",
-      captionVerdiazulFruit: "The group sharing fruit.",
-      inquireTitle: "Plan a trip",
-      inquireLead:
-        "Email info@athlas.org with the team name, sport, and the dates you have in mind.",
-      inquireCta: "Email info@athlas.org",
+      slotTurtlesTitle: "Verdiazul",
+      inquireLead: "Email us for more information.",
+      inquireCta: "travel@athlas.org",
+      formSubmit: "Send to travel@athlas.org",
+      success: "Your email app opened with a message ready to send to travel@athlas.org.",
     },
     coaches: {
       title: "For coaches",
