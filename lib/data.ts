@@ -263,6 +263,20 @@ export const sports = [
   },
 ] as const;
 
+export const sportList = [
+  { slug: "futbol", name: { es: "fútbol", en: "soccer" } },
+  { slug: "atletismo", name: { es: "atletismo", en: "track and field" } },
+  { slug: null, name: { es: "cross country", en: "cross country" } },
+  { slug: null, name: { es: "lucha", en: "wrestling" } },
+  { slug: "beisbol", name: { es: "béisbol", en: "baseball" } },
+  { slug: "golf", name: { es: "golf", en: "golf" } },
+  { slug: "natacion", name: { es: "natación", en: "swimming" } },
+  { slug: null, name: { es: "tenis", en: "tennis" } },
+  { slug: "baloncesto", name: { es: "baloncesto", en: "basketball" } },
+  { slug: null, name: { es: "voleibol", en: "volleyball" } },
+  { slug: null, name: { es: "boliche", en: "bowling" } },
+] as const;
+
 export function getSport(slug: string) {
   return sports.find((sport) => sport.slug === slug);
 }

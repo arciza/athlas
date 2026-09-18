@@ -77,7 +77,8 @@ export const messages = {
       talk: "Hablemos",
       statUnis: "Trabajamos con más de 2.000 universidades",
       statSports: "Trabajamos con más de 20 modalidades deportivas",
-      statCountries: "Estudiantes de más de 100 países distintos compiten en USA",
+      statCountries: "Estudiantes-atletas de más de 50 países",
+      sportsMore: "y más",
       scholarshipsTitle: "Becas Athlas",
       scholarshipsP1:
         "En Athlas, creemos en eliminar las barreras financieras que puedan impedir que los talentosos estudiantes-atletas alcancen sus metas académicas y deportivas.",
@@ -133,13 +134,13 @@ export const messages = {
         name: "Martin Ponce",
         quote:
           "Gracias a la plataforma ATHLAS pude unirme al equipo universitario de Bethel, lo que me llevó a alcanzar los Nacionales NAIA en el 2023.",
-        image: "/media/testimonial-02.webp",
+        image: "/media/testimonial-03.webp",
       },
       {
         name: "Monserrat Rodríguez",
         quote:
           "Gracias a ATHLAS, tuve la oportunidad de correr para la Universidad de Bethel, terminando entre los 10 primeros de mi categoría.",
-        image: "/media/testimonial-03.webp",
+        image: "/media/testimonial-02.webp",
       },
     ],
     foundation: {
@@ -314,7 +315,8 @@ export const messages = {
       talk: "Let's talk",
       statUnis: "We work with more than 2,000 universities",
       statSports: "We work with more than 20 sports",
-      statCountries: "Student-athletes from more than 100 countries compete in the USA",
+      statCountries: "Student-athletes from more than 50 countries",
+      sportsMore: "and more",
       scholarshipsTitle: "Athlas Access",
       scholarshipsP1:
         "At Athlas, we believe in removing financial barriers that may prevent talented student-athletes from achieving their academic and sports goals.",
@@ -370,13 +372,13 @@ export const messages = {
         name: "Martin Ponce",
         quote:
           "Thanks to the ATHLAS platform, I joined the university team at Bethel, which led me to reach the NAIA Nationals in 2023.",
-        image: "/media/testimonial-02.webp",
+        image: "/media/testimonial-03.webp",
       },
       {
         name: "Monserrat Rodríguez",
         quote:
           "Thanks to ATHLAS, I achieved my dream of running for a U.S. university, finishing in the top 10 in my category.",
-        image: "/media/testimonial-03.webp",
+        image: "/media/testimonial-02.webp",
       },
     ],
     foundation: {

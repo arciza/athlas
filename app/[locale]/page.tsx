@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { sports } from "@/lib/data";
+import { sportList } from "@/lib/data";
 import { localePath } from "@/lib/i18n";
 import { t } from "@/lib/messages";
 import { getLocale } from "@/lib/params";
@@ -189,7 +189,7 @@ export default async function HomePage({
           {[
             ["2000", copy.home.statUnis],
             ["20", copy.home.statSports],
-            ["100", copy.home.statCountries],
+            ["50", copy.home.statCountries],
           ].map(([stat, label]) => (
             <div key={stat} className="rounded-2xl bg-white p-6 ring-1 ring-[#36348E]/10">
               <p className="font-heading text-4xl font-semibold text-[#36348E]">{stat}</p>
@@ -203,26 +203,25 @@ export default async function HomePage({
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="font-heading text-3xl font-semibold sm:text-4xl">{copy.home.sportsTitle}</h2>
           <p className="mt-3 max-w-2xl text-[#292929]/75">{copy.home.sportsLead}</p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {sports.map((sport) => (
-              <Link
-                key={sport.slug}
-                href={localePath(locale, `/becas/${sport.slug}`)}
-                className="group overflow-hidden rounded-2xl bg-[#0d0c2b] text-white"
-              >
-                <div className="relative h-44">
-                  <Image
-                    src={sport.image}
-                    alt=""
-                    fill
-                    className="object-cover opacity-70 transition group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <p className="px-4 py-4 font-medium">{sport.title[locale]}</p>
-              </Link>
+          <ul className="mt-8 flex flex-wrap gap-x-2 gap-y-3 text-[17px] leading-7 text-[#292929]">
+            {sportList.map((sport) => (
+              <li key={sport.name.en} className="after:ml-2 after:text-[#36348E]/40 after:content-['·'] last:after:content-none">
+                {sport.slug ? (
+                  <Link
+                    href={localePath(locale, `/becas/${sport.slug}`)}
+                    className="font-medium text-[#36348E] underline-offset-4 hover:underline"
+                  >
+                    {sport.name[locale]}
+                  </Link>
+                ) : (
+                  <span>{sport.name[locale]}</span>
+                )}
+              </li>
             ))}
-          </div>
+            <li>
+              <span>{copy.home.sportsMore}</span>
+            </li>
+          </ul>
         </div>
       </section>
 
