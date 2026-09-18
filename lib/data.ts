@@ -261,20 +261,235 @@ export const sports = [
       en: "Securing a baseball scholarship to a U.S. college requires not only talent and skill but also a strategic approach to recruitment. By showcasing your abilities in key tournaments and showcases, effectively communicating with coaches, and understanding the collegiate baseball landscape, you can enhance your chances of landing a scholarship. With dedication and hard work, the dream of playing college baseball while advancing your education is well within your reach.",
     },
   },
+  {
+    slug: "cross-country",
+    image: "/media/sports/track.jpg",
+    title: { es: "Becas de cross country en USA", en: "Cross country scholarships in the USA" },
+    intro: {
+      es: "¿Eres un corredor de fondo que busca llevar el cross country al nivel universitario en los Estados Unidos? Esta guía te ayuda a entender el panorama universitario, lo que buscan los programas y cómo prepararte para el reclutamiento.",
+      en: "Are you a distance runner looking to take cross country to the collegiate level in the United States? This guide helps you understand the college landscape, what programs look for, and how to prepare for recruitment.",
+    },
+    sections: [
+      {
+        title: { es: "Resumen del cross country universitario", en: "Overview of college cross country" },
+        body: {
+          es: "El cross country universitario en Estados Unidos se compite en las Divisiones I, II y III de la NCAA, la NAIA y la NJCAA. Muchos programas están ligados al atletismo, con una temporada de campo a través en otoño y pista en invierno y primavera. Las competencias se corren en circuitos de pasto, tierra o parque, no en pista, y el calendario suele incluir meets de conferencia y campeonatos de temporada.",
+          en: "College cross country in the United States is contested across NCAA Divisions I, II, and III, NAIA, and NJCAA. Many programs sit alongside track and field, with a fall cross country season and indoor and outdoor track later in the year. Races are run on grass, dirt, or park courses rather than a track, and the calendar typically includes conference meets and end-of-season championships.",
+        },
+      },
+      {
+        title: { es: "Requisitos atléticos", en: "Athletic requirements" },
+        body: {
+          es: "Los entrenadores buscan corredores con tiempos competitivos en distancias de fondo, consistencia en meets y la capacidad de aportar al equipo en competencias de conferencia. Un currículum con marcas recientes, resultados de campeonatos y experiencia en distintos tipos de terreno ayuda a mostrar tu nivel. Si también compites en pista, incluir esas marcas puede demostrar versatilidad.",
+          en: "Coaches look for runners with competitive distance times, consistency across meets, and the ability to contribute to the team at conference competitions. A resume with recent marks, championship results, and experience on different course types helps show your level. If you also race track, including those marks can demonstrate versatility.",
+        },
+      },
+      {
+        title: { es: "Proceso de reclutamiento", en: "Recruitment process" },
+        body: {
+          es: "El reclutamiento suele comenzar en el penúltimo año de secundaria. Compila un currículum atlético con tus mejores marcas, resultados de temporada y un video o perfil con competencias recientes. Escribir a los programas con claridad sobre tu rendimiento académico y deportivo es un paso esencial para llegar a la universidad deseada.",
+          en: "Recruitment often starts in the junior year of high school. Compile an athletic resume with your best marks, season results, and a video or profile with recent races. Writing to programs clearly about your academic and athletic record is an essential step toward the university you want.",
+        },
+      },
+      {
+        title: { es: "Oportunidades de becas", en: "Scholarship opportunities" },
+        body: {
+          es: "Las becas pueden ser completas o parciales, según la división, el presupuesto del equipo y cómo encajas en las necesidades del programa. En algunas escuelas el apoyo se comparte con el grupo de atletismo. La División III de la NCAA no ofrece becas deportivas, aunque puede haber ayuda académica o financiera. Entender el nivel de cada escuela te ayuda a apuntar a opciones realistas.",
+          en: "Scholarships can be full or partial, depending on the division, the team budget, and how you fit the program’s needs. At some schools, support is shared with the track and field roster. NCAA Division III does not offer athletic scholarships, though academic or need-based aid may be available. Understanding each school’s level helps you target realistic options.",
+        },
+      },
+    ],
+    conclusion: {
+      es: "Conseguir una beca de cross country en Estados Unidos pide constancia, marcas claras y un reclutamiento organizado. Con la preparación adecuada, puedes combinar una educación universitaria con una temporada de fondo a nivel collegiate.",
+      en: "Earning a cross country scholarship in the United States takes consistency, clear marks, and organized recruiting. With the right preparation, you can combine a college education with a collegiate distance season.",
+    },
+  },
+  {
+    slug: "lucha",
+    image: "/media/hero-05.webp",
+    title: { es: "Becas de lucha en USA", en: "Wrestling scholarships in the USA" },
+    intro: {
+      es: "¿Eres un luchador que busca competir y estudiar en una universidad de Estados Unidos? Esta guía cubre el panorama de la lucha universitaria, lo que suelen pedir los programas y cómo acercarte al reclutamiento.",
+      en: "Are you a wrestler looking to compete and study at a university in the United States? This guide covers the college wrestling landscape, what programs typically look for, and how to approach recruiting.",
+    },
+    sections: [
+      {
+        title: { es: "Resumen de la lucha universitaria", en: "Overview of college wrestling" },
+        body: {
+          es: "La lucha universitaria en Estados Unidos se ofrece en las Divisiones I, II y III de la NCAA, la NAIA y la NJCAA. El estilo predominante es folkstyle, con dual meets entre equipos y torneos a lo largo de la temporada. Cada programa trabaja con categorías de peso y busca un roster que pueda puntuar en competencia de conferencia y nacional.",
+          en: "College wrestling in the United States is offered across NCAA Divisions I, II, and III, NAIA, and NJCAA. Folkstyle is the predominant style, with dual meets between teams and tournaments through the season. Each program works with weight classes and looks for a roster that can score in conference and national competition.",
+        },
+      },
+      {
+        title: { es: "Requisitos atléticos", en: "Athletic requirements" },
+        body: {
+          es: "Los programas buscan luchadores con resultados en torneos, solidez técnica y la capacidad de competir de forma consistente en su categoría. Un historial con colocaciones, video de combates recientes y notas sobre tu peso de competencia ayuda a los entrenadores a evaluar tu perfil. El expediente académico también forma parte de la revisión.",
+          en: "Programs look for wrestlers with tournament results, technical soundness, and the ability to compete consistently in their weight class. A record with placements, film of recent matches, and notes on your competition weight helps coaches evaluate your profile. Your academic record is part of the review as well.",
+        },
+      },
+      {
+        title: { es: "Proceso de reclutamiento", en: "Recruitment process" },
+        body: {
+          es: "El reclutamiento puede comenzar en los últimos años de secundaria, con entrenadores siguiendo torneos y perfiles en línea. Prepara un currículum atlético, un video destacado de combates y un resumen de tu rendimiento académico. Participar en eventos donde hay exposición y escribir a los programas de tu interés son pasos habituales para llegar a la universidad deseada.",
+          en: "Recruiting can start in the later years of high school, with coaches following tournaments and online profiles. Prepare an athletic resume, a highlight video of matches, and a summary of your academic record. Competing in events with exposure and writing to programs you care about are usual steps toward the university you want.",
+        },
+      },
+      {
+        title: { es: "Oportunidades de becas", en: "Scholarship opportunities" },
+        body: {
+          es: "Las becas de lucha pueden ser completas o parciales, según la división y el presupuesto del equipo. Las escuelas de las Divisiones I y II de la NCAA y algunos programas de la NAIA suelen ofrecer apoyo atlético; la División III no ofrece becas deportivas. El paquete final depende de cómo encajas en las necesidades del roster y de las opciones académicas de cada escuela.",
+          en: "Wrestling scholarships can be full or partial, depending on the division and the team budget. NCAA Division I and II schools and some NAIA programs typically offer athletic aid; Division III does not offer athletic scholarships. The final package depends on how you fit roster needs and on each school’s academic options.",
+        },
+      },
+    ],
+    conclusion: {
+      es: "Una beca de lucha en Estados Unidos combina rendimiento en el tapiz, preparación académica y un proceso de reclutamiento claro. Con dedicación y un perfil bien armado, puedes apuntar a un programa que se ajuste a tu nivel y a tus estudios.",
+      en: "A wrestling scholarship in the United States combines performance on the mat, academic preparation, and a clear recruiting process. With dedication and a well-built profile, you can aim for a program that fits your level and your studies.",
+    },
+  },
+  {
+    slug: "tenis",
+    image: "/media/hero-05.webp",
+    title: { es: "Becas de tenis en USA", en: "Tennis scholarships in the USA" },
+    intro: {
+      es: "¿Eres un tenista que quiere seguir compitiendo mientras estudia en Estados Unidos? Esta guía explica el tenis universitario, qué material suelen pedir los entrenadores y cómo se arma el reclutamiento.",
+      en: "Are you a tennis player who wants to keep competing while studying in the United States? This guide explains college tennis, what coaches typically ask for, and how recruiting is put together.",
+    },
+    sections: [
+      {
+        title: { es: "Resumen del tenis universitario", en: "Overview of college tennis" },
+        body: {
+          es: "El tenis universitario en Estados Unidos se juega en las Divisiones I, II y III de la NCAA, la NAIA y la NJCAA. Los equipos compiten en dual matches de individuales y dobles, y el calendario incluye temporada regular y campeonatos de conferencia. Es un deporte de equipo con un fuerte componente individual: tu posición en el lineup depende de tu nivel frente a compañeros y rivales.",
+          en: "College tennis in the United States is played across NCAA Divisions I, II, and III, NAIA, and NJCAA. Teams compete in dual matches of singles and doubles, and the calendar includes a regular season and conference championships. It is a team sport with a strong individual component: your lineup spot depends on your level against teammates and opponents.",
+        },
+      },
+      {
+        title: { es: "Requisitos atléticos", en: "Athletic requirements" },
+        body: {
+          es: "Los entrenadores buscan un historial competitivo sólido, resultados en torneos y, cuando está disponible, un ranking o perfil que muestre tu nivel. Un video de partidos recientes, notas sobre individuales y dobles, y un currículum con resultados ayudan a presentar tu juego. La consistencia y la capacidad de aportar al equipo en dual matches son tan importantes como un título puntual.",
+          en: "Coaches look for a strong competitive record, tournament results, and, when available, a ranking or profile that shows your level. Recent match video, notes on singles and doubles, and a resume of results help present your game. Consistency and the ability to contribute in dual matches matter as much as a single title.",
+        },
+      },
+      {
+        title: { es: "Proceso de reclutamiento", en: "Recruitment process" },
+        body: {
+          es: "El reclutamiento puede empezar en el segundo o tercer año de secundaria. Armar un currículum, un video de juego y una lista de escuelas que se ajusten a tu nivel académico y tenístico es el punto de partida. Contactar a los programas con tus resultados actualizados y mantener el expediente académico en orden son pasos esenciales para llegar a la universidad deseada.",
+          en: "Recruiting can start in the sophomore or junior year of high school. Building a resume, match video, and a list of schools that fit your academic and tennis level is the starting point. Contacting programs with updated results and keeping your academic record in order are essential steps toward the university you want.",
+        },
+      },
+      {
+        title: { es: "Oportunidades de becas", en: "Scholarship opportunities" },
+        body: {
+          es: "Las becas de tenis pueden ser completas o parciales, según la división y el presupuesto del programa. Las Divisiones I y II de la NCAA y algunos programas de la NAIA pueden ofrecer apoyo atlético; la División III no ofrece becas deportivas, aunque puede haber ayuda académica. El paquete depende de cómo complementas el lineup y de las opciones financieras de cada escuela.",
+          en: "Tennis scholarships can be full or partial, depending on the division and the program budget. NCAA Divisions I and II and some NAIA programs may offer athletic aid; Division III does not offer athletic scholarships, though academic aid may be available. The package depends on how you complement the lineup and on each school’s financial options.",
+        },
+      },
+    ],
+    conclusion: {
+      es: "Obtener una beca de tenis en Estados Unidos pide un historial claro, un buen video y un reclutamiento dirigido a programas que encajen contigo. Con preparación y constancia, puedes seguir compitiendo mientras avanzas en tus estudios.",
+      en: "Earning a tennis scholarship in the United States takes a clear record, solid match video, and recruiting aimed at programs that fit you. With preparation and consistency, you can keep competing while you advance in your studies.",
+    },
+  },
+  {
+    slug: "voleibol",
+    image: "/media/hero-05.webp",
+    title: { es: "Becas de voleibol en USA", en: "Volleyball scholarships in the USA" },
+    intro: {
+      es: "¿Eres un jugador o una jugadora de voleibol que busca una beca universitaria en Estados Unidos? Esta guía resume el panorama collegiate, lo que suelen buscar los entrenadores y cómo se desarrolla el reclutamiento.",
+      en: "Are you a volleyball player looking for a college scholarship in the United States? This guide summarizes the collegiate landscape, what coaches typically look for, and how recruiting unfolds.",
+    },
+    sections: [
+      {
+        title: { es: "Resumen del voleibol universitario", en: "Overview of college volleyball" },
+        body: {
+          es: "El voleibol universitario en Estados Unidos se ofrece en las Divisiones I, II y III de la NCAA, la NAIA y la NJCAA. El formato más común es el voleibol de sala, con temporada de conferencia y campeonatos. Algunos campus también tienen voleibol de playa; el reclutamiento y las becas de cada disciplina se manejan por separado. Entender el nivel de cada división te ayuda a identificar dónde puedes aportar al equipo.",
+          en: "College volleyball in the United States is offered across NCAA Divisions I, II, and III, NAIA, and NJCAA. Indoor volleyball is the most common format, with a conference season and championships. Some campuses also have beach volleyball; recruiting and scholarships for each discipline are handled separately. Understanding each division’s level helps you see where you can contribute to a team.",
+        },
+      },
+      {
+        title: { es: "Requisitos atléticos", en: "Athletic requirements" },
+        body: {
+          es: "Los entrenadores buscan atletas con fundamentos sólidos en su posición —ataque, recepción, armado, bloqueo o defensa— y video que muestre esos roles en competencia. Un currículum con club o selección, medidas relevantes para tu posición y resultados de torneos ayuda a presentar tu perfil. La lectura de juego y la capacidad de encajar en un sistema de equipo pesan tanto como el salto o el saque.",
+          en: "Coaches look for athletes with solid fundamentals in their position — attacking, passing, setting, blocking, or defense — and film that shows those roles in competition. A resume with club or national-team experience, relevant measurements for your position, and tournament results helps present your profile. Game sense and the ability to fit a team system matter as much as jump or serve.",
+        },
+      },
+      {
+        title: { es: "Proceso de reclutamiento", en: "Recruitment process" },
+        body: {
+          es: "El reclutamiento de voleibol suele empezar temprano, con entrenadores siguiendo clubes, exhibiciones y perfiles en línea. Prepara un video destacado, un currículum actualizado y un listado de escuelas que se ajusten a tu nivel académico y deportivo. Jugar en torneos con exposición y escribir a los programas de tu interés son pasos habituales hacia la universidad deseada.",
+          en: "Volleyball recruiting often starts early, with coaches following clubs, showcases, and online profiles. Prepare a highlight video, an updated resume, and a list of schools that fit your academic and athletic level. Playing in events with exposure and writing to programs you care about are usual steps toward the university you want.",
+        },
+      },
+      {
+        title: { es: "Oportunidades de becas", en: "Scholarship opportunities" },
+        body: {
+          es: "Las becas de voleibol pueden ser completas o parciales, según la división y el presupuesto del programa. Las escuelas de las Divisiones I y II de la NCAA suelen ofrecer más apoyo atlético; la División III no ofrece becas deportivas. El paquete depende de la posición, las necesidades del roster y las opciones académicas de cada universidad.",
+          en: "Volleyball scholarships can be full or partial, depending on the division and the program budget. NCAA Division I and II schools typically offer more athletic aid; Division III does not offer athletic scholarships. The package depends on position, roster needs, and each university’s academic options.",
+        },
+      },
+    ],
+    conclusion: {
+      es: "Conseguir una beca de voleibol en Estados Unidos requiere un perfil claro, video de calidad y un reclutamiento dirigido. Con trabajo y un plan realista de escuelas, puedes combinar el deporte universitario con tus estudios.",
+      en: "Earning a volleyball scholarship in the United States takes a clear profile, quality film, and focused recruiting. With work and a realistic list of schools, you can combine college volleyball with your studies.",
+    },
+  },
+  {
+    slug: "boliche",
+    image: "/media/hero-05.webp",
+    title: { es: "Becas de boliche en USA", en: "Bowling scholarships in the USA" },
+    intro: {
+      es: "¿Practicas boliche y quieres estudiar en una universidad de Estados Unidos? Esta guía describe cómo se organiza el boliche collegiate, qué suelen revisar los entrenadores y cómo iniciar el reclutamiento.",
+      en: "Do you bowl and want to study at a university in the United States? This guide describes how collegiate bowling is organized, what coaches typically review, and how to start recruiting.",
+    },
+    sections: [
+      {
+        title: { es: "Resumen del boliche universitario", en: "Overview of college bowling" },
+        body: {
+          es: "El boliche universitario en Estados Unidos se compite en programas de la NCAA, la NAIA y otras asociaciones collegiate. Los equipos combinan competencias individuales y formatos de equipo a lo largo de la temporada, con invitacionales y campeonatos. El nivel y el calendario varían según la conferencia y la escuela, por eso conviene investigar cada programa antes de escribir.",
+          en: "College bowling in the United States is contested in NCAA, NAIA, and other collegiate programs. Teams combine individual competition and team formats across the season, with invitationals and championships. Level and calendar vary by conference and school, so it is worth researching each program before you write.",
+        },
+      },
+      {
+        title: { es: "Requisitos atléticos", en: "Athletic requirements" },
+        body: {
+          es: "Los entrenadores revisan promedios recientes, resultados en torneos y la capacidad de aportar en formatos de equipo. Un historial con scores de competencia, video de tu juego y notas sobre las condiciones en las que has lanzado ayuda a mostrar tu nivel. La constancia entre líneas y la preparación para distintas condiciones de pista pesan tanto como un score aislado.",
+          en: "Coaches review recent averages, tournament results, and the ability to contribute in team formats. A record with competition scores, video of your game, and notes on the conditions you have bowled in helps show your level. Consistency across lines and preparation for different lane conditions matter as much as a single score.",
+        },
+      },
+      {
+        title: { es: "Proceso de reclutamiento", en: "Recruitment process" },
+        body: {
+          es: "El reclutamiento suele apoyarse en un currículum con promedios y torneos, un video de tu técnica y un expediente académico en orden. Contactar a los programas con tus resultados actualizados, y si es posible competir en eventos con visibilidad, son pasos útiles. Empieza con una lista de escuelas que combinen tu nivel de juego con tus objetivos de estudio.",
+          en: "Recruiting typically rests on a resume of averages and tournaments, video of your technique, and a solid academic record. Contacting programs with updated results, and competing in events with visibility when you can, are useful steps. Start with a list of schools that combine your bowling level with your academic goals.",
+        },
+      },
+      {
+        title: { es: "Oportunidades de becas", en: "Scholarship opportunities" },
+        body: {
+          es: "El apoyo para boliche puede ser atlético, académico o una combinación, según la escuela y la asociación. Algunas universidades ofrecen becas parciales o paquetes mixtos; no todas las divisiones manejan el mismo tipo de ayuda deportiva. Preguntar cómo se estructura el financiamiento en cada programa evita sorpresas y te permite comparar opciones reales.",
+          en: "Support for bowling can be athletic, academic, or a mix, depending on the school and the association. Some universities offer partial scholarships or mixed packages; not every division handles athletic aid the same way. Asking how funding is structured at each program avoids surprises and lets you compare real options.",
+        },
+      },
+    ],
+    conclusion: {
+      es: "Una beca de boliche en Estados Unidos se construye con resultados claros, un buen contacto con los programas y un plan académico sólido. Con preparación, puedes seguir compitiendo mientras cursas la universidad.",
+      en: "A bowling scholarship in the United States is built on clear results, good contact with programs, and a solid academic plan. With preparation, you can keep competing while you go to college.",
+    },
+  },
 ] as const;
 
 export const sportList = [
   { slug: "futbol", name: { es: "fútbol", en: "soccer" } },
   { slug: "atletismo", name: { es: "atletismo", en: "track and field" } },
-  { slug: null, name: { es: "cross country", en: "cross country" } },
-  { slug: null, name: { es: "lucha", en: "wrestling" } },
+  { slug: "cross-country", name: { es: "cross country", en: "cross country" } },
+  { slug: "lucha", name: { es: "lucha", en: "wrestling" } },
   { slug: "beisbol", name: { es: "béisbol", en: "baseball" } },
   { slug: "golf", name: { es: "golf", en: "golf" } },
   { slug: "natacion", name: { es: "natación", en: "swimming" } },
-  { slug: null, name: { es: "tenis", en: "tennis" } },
+  { slug: "tenis", name: { es: "tenis", en: "tennis" } },
   { slug: "baloncesto", name: { es: "baloncesto", en: "basketball" } },
-  { slug: null, name: { es: "voleibol", en: "volleyball" } },
-  { slug: null, name: { es: "boliche", en: "bowling" } },
+  { slug: "voleibol", name: { es: "voleibol", en: "volleyball" } },
+  { slug: "boliche", name: { es: "boliche", en: "bowling" } },
 ] as const;
 
 export function getSport(slug: string) {

@@ -206,16 +206,12 @@ export default async function HomePage({
           <ul className="mt-8 flex flex-wrap gap-x-2 gap-y-3 text-[17px] leading-7 text-[#292929]">
             {sportList.map((sport) => (
               <li key={sport.name.en} className="after:ml-2 after:text-[#36348E]/40 after:content-['·'] last:after:content-none">
-                {sport.slug ? (
-                  <Link
-                    href={localePath(locale, `/becas/${sport.slug}`)}
-                    className="font-medium text-[#36348E] underline-offset-4 hover:underline"
-                  >
-                    {sport.name[locale]}
-                  </Link>
-                ) : (
-                  <span>{sport.name[locale]}</span>
-                )}
+                <Link
+                  href={localePath(locale, `/becas/${sport.slug}`)}
+                  className="font-medium text-[#36348E] underline-offset-4 hover:underline"
+                >
+                  {sport.name[locale]}
+                </Link>
               </li>
             ))}
             <li>
