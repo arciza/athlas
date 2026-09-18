@@ -52,14 +52,6 @@ export function SiteFooter({ locale }: { locale: Locale }) {
               </Link>
             </li>
             <li>
-              <Link
-                href={localePath(locale, "/donaciones-costarica")}
-                className="text-white/80 hover:text-[#FFC53A]"
-              >
-                {copy.nav.costaRica}
-              </Link>
-            </li>
-            <li>
               <Link href={localePath(locale, "/entrenadores")} className="text-white/80 hover:text-[#FFC53A]">
                 {copy.nav.coaches}
               </Link>

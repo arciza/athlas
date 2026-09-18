@@ -12,7 +12,6 @@ export const messages = {
       how: "¿Cómo funciona?",
       sports: "Becas",
       foundation: "Fundación",
-      costaRica: "Costa Rica 2024",
       travel: "Travel",
       coaches: "Entrenadores",
       faq: "Preguntas frecuentes",
@@ -164,15 +163,6 @@ export const messages = {
       donateNote:
         "Para donar, escribe a info@athlas.org. El checkout de donaciones del sitio anterior no está en esta versión.",
     },
-    costaRica: {
-      title: "Donaciones – Costa Rica 2024",
-      hero: "Juntos, impulsamos sueños deportivos en Costa Rica",
-      p1: "En Athlas, creemos en el potencial ilimitado de la juventud y el poder transformador del deporte. Este año, nuestra misión es asegurar que cinco jóvenes atletas costarricenses tengan la oportunidad de estudiar y competir en prestigiosas universidades estadounidenses. Cada donación nos acerca a una beca completa por atleta, permitiéndoles alcanzar sus sueños deportivos y académicos.",
-      p2: "¡Apoya el futuro deportivo de Costa Rica y ayuda a estos jóvenes talentosos a superar sus límites! Tu contribución no solo cambiará vidas; construirá un legado de excelencia y oportunidad.",
-      p3: "Haz tu donación hoy y sé parte de esta increíble jornada hacia el éxito.",
-      meet: "Conoce a los atletas",
-      more: "Ver perfil",
-    },
     athlete: {
       education: "Educación",
       history: "Historial deportivo",
@@ -258,7 +248,6 @@ export const messages = {
       how: "How it works",
       sports: "Scholarships",
       foundation: "Foundation",
-      costaRica: "Costa Rica 2024",
       travel: "Travel",
       coaches: "Coaches",
       faq: "FAQ",
@@ -410,15 +399,6 @@ export const messages = {
       donateCta: "Email info@athlas.org",
       donateNote:
         "To donate, email info@athlas.org. The previous site’s donation checkout is not on this version.",
-    },
-    costaRica: {
-      title: "Donations – Costa Rica 2024",
-      hero: "Together, we drive sports dreams in Costa Rica",
-      p1: "At Athlas, we believe in the unlimited potential of youth and the transformative power of sports. This year, our mission is to ensure that five young Costa Rican athletes have the opportunity to study and compete at prestigious U.S. universities. Every donation brings us closer to a full scholarship for each athlete, allowing them to reach their sports and academic dreams.",
-      p2: "Support the sports future of Costa Rica and help these talented young people push their limits! Your contribution will not only change lives; it will build a legacy of excellence and opportunity.",
-      p3: "Make your donation today and be part of this incredible journey to success.",
-      meet: "Meet the athletes",
-      more: "View profile",
     },
     athlete: {
       education: "Education",

@@ -1,7 +1,5 @@
-import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { buttonVariants } from "@/components/ui/button";
-import { localePath } from "@/lib/i18n";
 import { t } from "@/lib/messages";
 import { getLocale } from "@/lib/params";
 import { cn } from "@/lib/utils";
@@ -43,12 +41,6 @@ export default async function FoundationPage({
           {copy.foundation.donateCta}
         </a>
         <p className="mt-4 text-sm text-[#545454]">{copy.foundation.donateNote}</p>
-        <Link
-          href={localePath(locale, "/donaciones-costarica")}
-          className="mt-6 inline-block text-sm font-medium text-[#36348E] underline-offset-4 hover:underline"
-        >
-          {copy.nav.costaRica}
-        </Link>
       </section>
     </>
   );

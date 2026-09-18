@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
     return [
       { source: "/fundacion-athlas", destination: "/fundacion", permanent: false },
       { source: "/en/fundacion-athlas", destination: "/en/fundacion", permanent: false },
+      { source: "/donaciones-costarica", destination: "/fundacion", permanent: false },
+      { source: "/en/donaciones-costarica", destination: "/en/fundacion", permanent: false },
+      { source: "/costa-rica", destination: "/fundacion", permanent: false },
+      { source: "/en/costa-rica", destination: "/en/fundacion", permanent: false },
       { source: "/faq", destination: "/preguntas-frecuentes", permanent: false },
       { source: "/en/faq", destination: "/en/preguntas-frecuentes", permanent: false },
       { source: "/politica-de-privacidad", destination: "/privacidad", permanent: false },

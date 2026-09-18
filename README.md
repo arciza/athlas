@@ -30,7 +30,6 @@ Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
 - How the process works
 - Sport scholarship guides (soccer, track, swimming, golf, basketball, baseball)
 - Foundation / donations (mailto; WordPress GiveWP checkout is not replicated)
-- Costa Rica 2024 athletes
 - Athlas Travel (custom Costa Rica trips for US teams; Book now / Reservar to travel@athlas.org)
 - Coaches inquiry form
 - FAQ and privacy policy

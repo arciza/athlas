@@ -293,15 +293,6 @@ export default async function HomePage({
             >
               {copy.nav.donate}
             </Link>
-            <Link
-              href={localePath(locale, "/donaciones-costarica")}
-              className={cn(
-                buttonVariants({ size: "lg", variant: "outline" }),
-                "h-11 border-white/40 bg-transparent px-5 text-white hover:bg-white/10"
-              )}
-            >
-              {copy.nav.costaRica}
-            </Link>
           </div>
         </div>
       </section>

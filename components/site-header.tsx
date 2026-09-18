@@ -23,7 +23,6 @@ function navItems(locale: Locale) {
     { href: localePath(locale, "/becas"), label: copy.nav.sports },
     { href: localePath(locale, "/travel"), label: copy.nav.travel },
     { href: localePath(locale, "/fundacion"), label: copy.nav.foundation },
-    { href: localePath(locale, "/donaciones-costarica"), label: copy.nav.costaRica },
     { href: localePath(locale, "/entrenadores"), label: copy.nav.coaches },
     { href: localePath(locale, "/preguntas-frecuentes"), label: copy.nav.faq },
   ];
