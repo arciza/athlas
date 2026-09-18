@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { sportList } from "@/lib/data";
 import { localePath } from "@/lib/i18n";
 import { t } from "@/lib/messages";
 import { getLocale } from "@/lib/params";
@@ -201,23 +200,17 @@ export default async function HomePage({
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="font-heading text-3xl font-semibold sm:text-4xl">{copy.home.sportsTitle}</h2>
-          <p className="mt-3 max-w-2xl text-[#292929]/75">{copy.home.sportsLead}</p>
-          <ul className="mt-8 flex flex-wrap gap-x-2 gap-y-3 text-[17px] leading-7 text-[#292929]">
-            {sportList.map((sport) => (
-              <li key={sport.name.en} className="after:ml-2 after:text-[#36348E]/40 after:content-['·'] last:after:content-none">
-                <Link
-                  href={localePath(locale, `/becas/${sport.slug}`)}
-                  className="font-medium text-[#36348E] underline-offset-4 hover:underline"
-                >
-                  {sport.name[locale]}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <span>{copy.home.sportsMore}</span>
-            </li>
-          </ul>
+          <h2 className="font-heading text-3xl font-semibold sm:text-4xl">{copy.apply.title}</h2>
+          <p className="mt-4 max-w-2xl text-[15px] leading-7 text-[#292929]/80">{copy.apply.lead}</p>
+          <Link
+            href={localePath(locale, "/proceso")}
+            className={cn(
+              buttonVariants({ size: "lg" }),
+              "mt-8 inline-flex h-11 bg-[#36348E] px-5 text-white hover:bg-[#36348E]/90"
+            )}
+          >
+            {copy.home.start}
+          </Link>
         </div>
       </section>
 
