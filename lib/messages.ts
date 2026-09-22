@@ -232,6 +232,13 @@ export const messages = {
       applyLead:
         "Completa nuestro formulario de contacto y déjanos ser parte de tu camino al éxito.",
     },
+    scholarshipsPage: {
+      title: "Becas",
+      lead: "Llevar el deporte a otro nivel, en universidades de Estados Unidos.",
+      p1: "Conseguir una beca deportiva en Estados Unidos exige sacrificio, buenas calificaciones y un alto nivel en tu deporte. No es un atajo: es llevar el deporte a otro nivel, con la misma seriedad en el entrenamiento y en el aula.",
+      p2: "Athlas trabaja con atletas talentosos que buscan esa oportunidad. La aceptación depende del talento en tu deporte y de tu historial académico, entre otros criterios.",
+      p3: "Si estás listo para dar el siguiente paso, inicia tu proceso. Athlas recibe solicitudes dos veces al año, para los períodos de primavera y otoño.",
+    },
     notFound: {
       title: "Página no encontrada",
       body: "Esa ruta no existe en este sitio.",
@@ -469,6 +476,13 @@ export const messages = {
       apply: "Apply now",
       applyLead:
         "Complete our contact form and let us be part of your journey to success.",
+    },
+    scholarshipsPage: {
+      title: "Scholarships",
+      lead: "Taking sport to a higher level at universities in the United States.",
+      p1: "Earning a U.S. athletic scholarship takes sacrifice, good grades, and a high level in your sport. It is not a shortcut: it is taking sport to a higher level, with the same seriousness in training and in the classroom.",
+      p2: "Athlas works with talented athletes who are looking for that opportunity. Acceptance depends on talent in your sport and on your academic record, among other criteria.",
+      p3: "If you are ready for the next step, start the process. Athlas receives applications twice a year, for the spring and fall terms.",
     },
     notFound: {
       title: "Page not found",
