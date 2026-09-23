@@ -150,4 +150,8 @@
   .font-heading {
     letter-spacing: -0.02em;
   }
+  .font-wordmark {
+    font-family: "Dharma Gothic E", sans-serif;
+    font-synthesis: none;
+  }
 }

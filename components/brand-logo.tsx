@@ -31,7 +31,7 @@ export function BrandLogo({
       </span>
       <span
         className={cn(
-          "font-heading text-4xl font-semibold tracking-[0.08em]",
+          "font-wordmark text-4xl font-semibold tracking-[0.08em]",
           inverted ? "text-white" : "text-[#083677]"
         )}
       >

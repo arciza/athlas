@@ -31,10 +31,10 @@ export default async function HomePage({
         </video>
         <div className="absolute inset-0 bg-[#083677]/55" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 sm:px-6 sm:pb-24">
-          <p className="text-sm font-semibold tracking-[0.28em] text-[#b8283f] uppercase">
+          <p className="font-wordmark text-4xl font-semibold tracking-[0.08em] text-[#b8283f] uppercase">
             {copy.home.heroTitle}
           </p>
-          <h1 className="font-heading mt-3 max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">
+          <h1 className="mt-3 max-w-3xl font-sans text-4xl font-semibold tracking-wide uppercase sm:text-6xl">
             {copy.home.heroSubtitle}
           </h1>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
