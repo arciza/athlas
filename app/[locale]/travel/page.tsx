@@ -1,20 +1,24 @@
-import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
+import { TravelPhotoCarousel } from "@/components/travel-photo-carousel";
 import { buttonVariants } from "@/components/ui/button";
 import { t } from "@/lib/messages";
 import { getLocale } from "@/lib/params";
 import { cn } from "@/lib/utils";
 
-function TravelPhoto({ src }: { src: string }) {
-  return (
-    <figure className="overflow-hidden rounded-2xl bg-[#FAFAFA]">
-      <div className="relative aspect-[3/4]">
-        <Image src={src} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-      </div>
-    </figure>
-  );
-}
+const teamPhotos = [
+  "/media/travel/surf-boards.jpg",
+  "/media/travel/surf-lesson.jpg",
+  "/media/travel/surf-practice.jpg",
+  "/media/travel/surfing.jpg",
+] as const;
+
+const verdiazulPhotos = [
+  "/media/travel/turtle-briefing.jpg",
+  "/media/travel/beach-line.jpg",
+  "/media/travel/verdiazul-bin.jpg",
+  "/media/travel/verdiazul-fruit.jpg",
+] as const;
 
 export default async function TravelPage({
   params,
@@ -49,20 +53,18 @@ export default async function TravelPage({
         </div>
 
         <h2 className="font-heading mt-12 text-2xl font-semibold">{copy.travel.slotTeamTitle}</h2>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <TravelPhoto src="/media/travel/surf-boards.jpg" />
-          <TravelPhoto src="/media/travel/surf-lesson.jpg" />
-          <TravelPhoto src="/media/travel/surf-practice.jpg" />
-          <TravelPhoto src="/media/travel/surfing.jpg" />
-        </div>
+        <TravelPhotoCarousel
+          photos={teamPhotos}
+          previousLabel={locale === "es" ? "Foto anterior" : "Previous photo"}
+          nextLabel={locale === "es" ? "Foto siguiente" : "Next photo"}
+        />
 
         <h2 className="font-heading mt-14 text-2xl font-semibold">{copy.travel.slotTurtlesTitle}</h2>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <TravelPhoto src="/media/travel/turtle-briefing.jpg" />
-          <TravelPhoto src="/media/travel/beach-line.jpg" />
-          <TravelPhoto src="/media/travel/verdiazul-bin.jpg" />
-          <TravelPhoto src="/media/travel/verdiazul-fruit.jpg" />
-        </div>
+        <TravelPhotoCarousel
+          photos={verdiazulPhotos}
+          previousLabel={locale === "es" ? "Foto anterior" : "Previous photo"}
+          nextLabel={locale === "es" ? "Foto siguiente" : "Next photo"}
+        />
       </section>
 
       <section id="travel-contact" className="scroll-mt-20 bg-[#36348E] py-16 text-white">
