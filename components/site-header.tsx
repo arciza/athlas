@@ -13,7 +13,7 @@ import {
   stripLocalePrefix,
   type Locale,
 } from "@/lib/i18n";
-import { sports } from "@/lib/data";
+import { getSportName, sports } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 function navItems(locale: Locale) {
@@ -103,7 +103,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                 onClick={() => setOpen(false)}
                 className="rounded-md px-2 py-2 text-sm text-white/85 hover:bg-white/10"
               >
-                {sport.title[locale]}
+                {getSportName(sport.slug, locale)}
               </Link>
             ))}
             <Link

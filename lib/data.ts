@@ -495,3 +495,13 @@ export const sportList = [
 export function getSport(slug: string) {
   return sports.find((sport) => sport.slug === slug);
 }
+
+export function getSportName(slug: string, locale: Locale) {
+  const item = sportList.find((sport) => sport.slug === slug);
+  if (!item) return slug;
+  const name = item.name[locale];
+  if (locale === "en") {
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  }
+  return name;
+}

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
 import { t } from "@/lib/messages";
 import { localePath, type Locale } from "@/lib/i18n";
-import { sports } from "@/lib/data";
+import { getSportName, sports } from "@/lib/data";
 
 export function SiteFooter({ locale }: { locale: Locale }) {
   const copy = t(locale);
@@ -32,7 +32,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
                   href={localePath(locale, `/becas/${sport.slug}`)}
                   className="text-white/80 hover:text-[#FFC53A]"
                 >
-                  {sport.title[locale]}
+                  {getSportName(sport.slug, locale)}
                 </Link>
               </li>
             ))}
