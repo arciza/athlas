@@ -18,7 +18,7 @@ export function BrandLogo({
     >
       <span
         className={cn(
-          "relative block h-11 w-11 overflow-hidden rounded-sm sm:h-12 sm:w-12",
+          "relative block h-12 w-12 shrink-0 overflow-hidden rounded-sm",
           inverted ? "bg-white/10" : "bg-[#083677]"
         )}
       >
@@ -26,12 +26,12 @@ export function BrandLogo({
         <img
           src="/media/logo.svg"
           alt=""
-          className="absolute left-0 top-0 h-11 w-[115px] max-w-none sm:h-12 sm:w-[125px]"
+          className="absolute left-0 top-0 h-12 w-[125px] max-w-none"
         />
       </span>
       <span
         className={cn(
-          "font-heading text-3xl font-semibold tracking-[0.12em] sm:text-4xl",
+          "font-heading text-4xl font-semibold tracking-[0.08em]",
           inverted ? "text-white" : "text-[#083677]"
         )}
       >

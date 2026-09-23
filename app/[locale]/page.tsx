@@ -86,7 +86,7 @@ export default async function HomePage({
             ].map(([title, body]) => (
               <Card key={title} className="bg-white">
                 <CardHeader>
-                  <CardTitle className="font-heading text-3xl text-[#083677] sm:text-4xl">{title}</CardTitle>
+                  <CardTitle className="font-heading text-4xl font-semibold text-[#083677]">{title}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-[15px] leading-7 text-[#083677]/80">{body}</CardContent>
               </Card>
@@ -130,13 +130,13 @@ export default async function HomePage({
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <Card className="bg-white">
               <CardHeader>
-                <CardTitle className="text-[#083677]">{copy.home.missionTitle}</CardTitle>
+                <CardTitle className="font-heading text-4xl font-semibold text-[#083677]">{copy.home.missionTitle}</CardTitle>
               </CardHeader>
               <CardContent className="leading-7 text-[#083677]/80">{copy.home.missionBody}</CardContent>
             </Card>
             <Card className="bg-white">
               <CardHeader>
-                <CardTitle className="text-[#083677]">{copy.home.visionTitle}</CardTitle>
+                <CardTitle className="font-heading text-4xl font-semibold text-[#083677]">{copy.home.visionTitle}</CardTitle>
               </CardHeader>
               <CardContent className="leading-7 text-[#083677]/80">{copy.home.visionBody}</CardContent>
             </Card>
