@@ -29,7 +29,7 @@ export default async function AthletePage({
     <>
       <PageHero title={athlete.name} subtitle={athlete.sport[locale]} image={athlete.cover} />
       <section className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[280px_1fr]">
-        <div className="overflow-hidden rounded-2xl bg-[#CDD4FB]/35">
+        <div className="overflow-hidden rounded-2xl bg-[#083677]/8">
           <Image
             src={athlete.image}
             alt={athlete.name}
@@ -39,15 +39,15 @@ export default async function AthletePage({
           />
         </div>
         <div>
-          <p className="text-[15px] leading-7 text-[#292929]/85">{athlete.summary[locale]}</p>
+          <p className="text-[15px] leading-7 text-[#083677]/85">{athlete.summary[locale]}</p>
           <h2 className="font-heading mt-10 text-2xl font-semibold">{copy.athlete.education}</h2>
-          <ul className="mt-4 list-disc space-y-3 pl-5 text-[15px] leading-7 text-[#292929]/85">
+          <ul className="mt-4 list-disc space-y-3 pl-5 text-[15px] leading-7 text-[#083677]/85">
             {athlete.education.map((item) => (
               <li key={item.es}>{item[locale]}</li>
             ))}
           </ul>
           <h2 className="font-heading mt-10 text-2xl font-semibold">{copy.athlete.history}</h2>
-          <ul className="mt-4 list-disc space-y-3 pl-5 text-[15px] leading-7 text-[#292929]/85">
+          <ul className="mt-4 list-disc space-y-3 pl-5 text-[15px] leading-7 text-[#083677]/85">
             {athlete.history.map((item) => (
               <li key={item.es}>{item[locale]}</li>
             ))}
@@ -56,15 +56,15 @@ export default async function AthletePage({
             href={`mailto:info@athlas.org?subject=${encodeURIComponent(athlete.name)}`}
             className={cn(
               buttonVariants({ size: "lg" }),
-              "mt-8 inline-flex h-11 bg-[#FFC53A] px-5 text-[#292929] hover:bg-[#FFC53A]/90"
+              "mt-8 inline-flex h-11 bg-[#247360] px-5 text-white hover:bg-[#247360]/90"
             )}
           >
             {copy.athlete.support}
           </a>
-          <div className="mt-12 rounded-2xl bg-[#FAFAFA] p-6">
+          <div className="mt-12 rounded-2xl bg-[#ffffff] p-6">
             <h3 className="font-heading text-xl font-semibold">{copy.athlete.joinTitle}</h3>
-            <p className="mt-3 leading-7 text-[#292929]/80">{copy.athlete.joinBody}</p>
-            <p className="mt-3 leading-7 text-[#292929]/80">{copy.athlete.joinCta}</p>
+            <p className="mt-3 leading-7 text-[#083677]/80">{copy.athlete.joinBody}</p>
+            <p className="mt-3 leading-7 text-[#083677]/80">{copy.athlete.joinCta}</p>
           </div>
         </div>
       </section>

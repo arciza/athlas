@@ -13,7 +13,7 @@ export function PageHero({
   action?: ReactNode;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-[#1c1b4a] text-white">
+    <section className="relative isolate overflow-hidden bg-[#083677] text-white">
       {image ? (
         <Image
           src={image}
@@ -24,7 +24,7 @@ export function PageHero({
           sizes="100vw"
         />
       ) : null}
-      <div className={`absolute inset-0 ${image ? "bg-[#1c1b4a]/55" : "bg-[#1c1b4a]"}`} />
+      <div className={`absolute inset-0 ${image ? "bg-[#083677]/55" : "bg-[#083677]"}`} />
       <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
         <h1 className="font-heading max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
           {title}

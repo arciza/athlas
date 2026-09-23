@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, Work_Sans } from "next/font/google";
+import { Oswald, Poppins } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
 });
 
-const workSans = Work_Sans({
+// Dharma Gothic E is not in the repo. Oswald is the condensed gothic stand-in
+// until Ari uploads a licensed Dharma Gothic E file.
+const heading = Oswald({
   subsets: ["latin"],
-  variable: "--font-work-sans",
+  weight: ["500", "600", "700"],
+  variable: "--font-heading-face",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${workSans.variable} h-full scroll-smooth antialiased`}
+      className={`${poppins.variable} ${heading.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-background font-sans text-foreground">{children}</body>
     </html>

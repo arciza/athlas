@@ -37,7 +37,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#36348E] text-white">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#083677] text-white">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <BrandLogo locale={locale} inverted />
         <nav className="hidden items-center gap-3 xl:gap-5 lg:flex">
@@ -45,7 +45,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-white/85 transition-colors hover:text-[#FFC53A]"
+              className="text-sm font-medium text-white/85 transition-colors hover:text-[#b8283f]"
             >
               {item.label}
             </Link>
@@ -63,7 +63,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             href={localePath(locale, "/proceso")}
             className={cn(
               buttonVariants({ size: "sm" }),
-              "hidden h-8 bg-[#FFC53A] text-[#292929] hover:bg-[#FFC53A]/90 md:inline-flex"
+              "hidden h-8 bg-[#247360] text-white hover:bg-[#247360]/90 md:inline-flex"
             )}
           >
             {copy.nav.apply}
@@ -81,7 +81,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
         </div>
       </div>
       {open ? (
-        <div className="border-t border-white/10 bg-[#2c2a75] px-4 py-4 lg:hidden">
+        <div className="border-t border-white/10 bg-[#083677] px-4 py-4 lg:hidden">
           <nav className="flex flex-col gap-1">
             {items.map((item) => (
               <Link
@@ -116,7 +116,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             <Link
               href={localePath(locale, "/proceso")}
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-md bg-[#FFC53A] px-3 py-2.5 text-center text-sm font-semibold text-[#292929]"
+              className="mt-2 rounded-md bg-[#247360] px-3 py-2.5 text-center text-sm font-semibold text-white"
             >
               {copy.nav.apply}
             </Link>

@@ -99,11 +99,11 @@ export function ContactForm({
         </p>
       ) : null}
       {status === "success" ? (
-        <p role="status" className="text-sm text-[#36348E]">
+        <p role="status" className="text-sm text-[#083677]">
           {variant === "travel" ? copy.travel.success : copy.apply.success}
         </p>
       ) : null}
-      <Button type="submit" className="h-10 bg-[#36348E] text-white hover:bg-[#36348E]/90">
+      <Button type="submit" className="h-10 bg-[#083677] text-white hover:bg-[#083677]/90">
         {variant === "travel" ? copy.travel.formSubmit : copy.form.submit}
       </Button>
     </form>

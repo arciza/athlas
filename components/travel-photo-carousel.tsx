@@ -29,7 +29,7 @@ export function TravelPhotoCarousel({
       <CarouselContent>
         {photos.map((src) => (
           <CarouselItem key={src}>
-            <figure className="overflow-hidden rounded-2xl bg-[#FAFAFA]">
+            <figure className="overflow-hidden rounded-2xl bg-[#ffffff]">
               <div className="relative aspect-[3/4]">
                 <Image
                   src={src}
@@ -44,11 +44,11 @@ export function TravelPhotoCarousel({
         ))}
       </CarouselContent>
       <CarouselPrevious
-        className="left-3 z-10 size-10 border-0 bg-white/90 text-[#36348E] shadow-sm hover:bg-white"
+        className="left-3 z-10 size-10 border-0 bg-white/90 text-[#083677] shadow-sm hover:bg-white"
         aria-label={previousLabel}
       />
       <CarouselNext
-        className="right-3 z-10 size-10 border-0 bg-white/90 text-[#36348E] shadow-sm hover:bg-white"
+        className="right-3 z-10 size-10 border-0 bg-white/90 text-[#083677] shadow-sm hover:bg-white"
         aria-label={nextLabel}
       />
     </Carousel>

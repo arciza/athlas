@@ -18,9 +18,9 @@ export default async function PrivacyPage({
         {privacySections[locale].map((section) => (
           <section key={section.title} className="mt-10 first:mt-0">
             <h2 className="font-heading text-2xl font-semibold">{section.title}</h2>
-            <p className="mt-3 text-[15px] leading-7 text-[#292929]/85">{section.body}</p>
+            <p className="mt-3 text-[15px] leading-7 text-[#083677]/85">{section.body}</p>
             {"bullets" in section && section.bullets ? (
-              <ul className="mt-4 list-disc space-y-3 pl-5 text-[15px] leading-7 text-[#292929]/85">
+              <ul className="mt-4 list-disc space-y-3 pl-5 text-[15px] leading-7 text-[#083677]/85">
                 {section.bullets.map((bullet) => (
                   <li key={bullet}>{bullet}</li>
                 ))}

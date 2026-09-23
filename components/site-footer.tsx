@@ -8,7 +8,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
   const copy = t(locale);
 
   return (
-    <footer className="bg-[#1c1b4a] text-white">
+    <footer className="bg-[#083677] text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div className="md:col-span-2">
           <BrandLogo locale={locale} inverted />
@@ -16,7 +16,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <p className="mt-4 text-sm text-white/70">{copy.footer.address}</p>
           <a
             href="mailto:info@athlas.org"
-            className="mt-2 inline-block text-sm font-medium text-[#FFC53A] hover:underline"
+            className="mt-2 inline-block text-sm font-medium text-[#b8283f] hover:underline"
           >
             {copy.footer.email}
           </a>
@@ -30,7 +30,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
               <li key={sport.slug}>
                 <Link
                   href={localePath(locale, `/becas/${sport.slug}`)}
-                  className="text-white/80 hover:text-[#FFC53A]"
+                  className="text-white/80 hover:text-[#b8283f]"
                 >
                   {getSportName(sport.slug, locale)}
                 </Link>
@@ -42,30 +42,30 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <p className="text-xs font-semibold tracking-[0.16em] text-white/50 uppercase">Athlas</p>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
-              <Link href={localePath(locale, "/travel")} className="text-white/80 hover:text-[#FFC53A]">
+              <Link href={localePath(locale, "/travel")} className="text-white/80 hover:text-[#b8283f]">
                 {copy.nav.travel}
               </Link>
             </li>
             <li>
-              <Link href={localePath(locale, "/fundacion")} className="text-white/80 hover:text-[#FFC53A]">
+              <Link href={localePath(locale, "/fundacion")} className="text-white/80 hover:text-[#b8283f]">
                 {copy.nav.foundation}
               </Link>
             </li>
             <li>
-              <Link href={localePath(locale, "/entrenadores")} className="text-white/80 hover:text-[#FFC53A]">
+              <Link href={localePath(locale, "/entrenadores")} className="text-white/80 hover:text-[#b8283f]">
                 {copy.nav.coaches}
               </Link>
             </li>
             <li>
               <Link
                 href={localePath(locale, "/preguntas-frecuentes")}
-                className="text-white/80 hover:text-[#FFC53A]"
+                className="text-white/80 hover:text-[#b8283f]"
               >
                 {copy.nav.faq}
               </Link>
             </li>
             <li>
-              <Link href={localePath(locale, "/privacidad")} className="text-white/80 hover:text-[#FFC53A]">
+              <Link href={localePath(locale, "/privacidad")} className="text-white/80 hover:text-[#b8283f]">
                 {copy.footer.privacy}
               </Link>
             </li>

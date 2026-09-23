@@ -22,7 +22,7 @@ npm start
 
 ## Stack
 
-Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
+Next.js, TypeScript, Tailwind CSS, and shadcn/ui. Body type is Poppins. Headings use Oswald as a condensed gothic stand-in until a licensed Dharma Gothic E file is added. Brand colors are navy `#083677`, green `#247360`, red `#b8283f`, and white.
 
 ## What this site includes
 

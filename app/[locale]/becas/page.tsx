@@ -23,20 +23,20 @@ export default async function SportsIndexPage({
         image="/media/hero-05.webp"
       />
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div className="max-w-3xl space-y-4 text-[15px] leading-7 text-[#292929]/85">
+        <div className="max-w-3xl space-y-4 text-[15px] leading-7 text-[#083677]/85">
           <p>{copy.scholarshipsPage.p1}</p>
           <p>{copy.scholarshipsPage.p2}</p>
           <p>{copy.scholarshipsPage.p3}</p>
         </div>
-        <ul className="mt-10 flex flex-wrap gap-x-2 gap-y-3 text-[17px] leading-7 text-[#292929]">
+        <ul className="mt-10 flex flex-wrap gap-x-2 gap-y-3 text-[17px] leading-7 text-[#083677]">
           {sportList.map((sport) => (
             <li
               key={sport.slug}
-              className="after:ml-2 after:text-[#36348E]/40 after:content-['·'] last:after:content-none"
+              className="after:ml-2 after:text-[#083677]/40 after:content-['·'] last:after:content-none"
             >
               <Link
                 href={localePath(locale, `/becas/${sport.slug}`)}
-                className="font-medium text-[#36348E] underline-offset-4 hover:underline"
+                className="font-medium text-[#083677] underline-offset-4 hover:underline"
               >
                 {sport.name[locale]}
               </Link>
@@ -50,7 +50,7 @@ export default async function SportsIndexPage({
           href={localePath(locale, "/proceso")}
           className={cn(
             buttonVariants({ size: "lg" }),
-            "mt-10 inline-flex h-11 bg-[#36348E] px-5 text-white hover:bg-[#36348E]/90"
+            "mt-10 inline-flex h-11 bg-[#083677] px-5 text-white hover:bg-[#083677]/90"
           )}
         >
           {copy.home.start}
