@@ -89,14 +89,14 @@ export default async function TravelPage({
           <p>{copy.travel.custom}</p>
         </div>
 
-        <h2 className="font-heading mt-12 text-2xl font-semibold">{copy.travel.slotTeamTitle}</h2>
+        <h2 className="font-heading mt-12 text-3xl font-semibold sm:text-4xl">{copy.travel.slotTeamTitle}</h2>
         <TravelPhotos
           photos={teamPhotos}
           previousLabel={locale === "es" ? "Foto anterior" : "Previous photo"}
           nextLabel={locale === "es" ? "Foto siguiente" : "Next photo"}
         />
 
-        <h2 className="font-heading mt-14 text-2xl font-semibold">{copy.travel.slotTurtlesTitle}</h2>
+        <h2 className="font-heading mt-14 text-3xl font-semibold sm:text-4xl">{copy.travel.slotTurtlesTitle}</h2>
         <TravelPhotos
           photos={verdiazulPhotos}
           previousLabel={locale === "es" ? "Foto anterior" : "Previous photo"}

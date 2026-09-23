@@ -86,7 +86,7 @@ export default async function HomePage({
             ].map(([title, body]) => (
               <Card key={title} className="bg-white">
                 <CardHeader>
-                  <CardTitle className="font-heading text-xl text-[#083677]">{title}</CardTitle>
+                  <CardTitle className="font-heading text-3xl text-[#083677] sm:text-4xl">{title}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-[15px] leading-7 text-[#083677]/80">{body}</CardContent>
               </Card>
@@ -151,7 +151,7 @@ export default async function HomePage({
             {copy.processSteps.map((step) => (
               <li key={step.n} className="rounded-2xl bg-[#083677] p-5 text-white">
                 <p className="text-sm font-semibold text-[#b8283f]">{step.n}</p>
-                <h3 className="font-heading mt-3 text-lg font-semibold">{step.title}</h3>
+                <h3 className="font-heading mt-3 text-2xl font-semibold sm:text-3xl">{step.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-white/80">{step.body}</p>
               </li>
             ))}

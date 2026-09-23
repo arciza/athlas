@@ -62,7 +62,7 @@ export default async function AthletePage({
             {copy.athlete.support}
           </a>
           <div className="mt-12 rounded-2xl bg-[#ffffff] p-6">
-            <h3 className="font-heading text-xl font-semibold">{copy.athlete.joinTitle}</h3>
+            <h3 className="font-heading text-3xl font-semibold sm:text-4xl">{copy.athlete.joinTitle}</h3>
             <p className="mt-3 leading-7 text-[#083677]/80">{copy.athlete.joinBody}</p>
             <p className="mt-3 leading-7 text-[#083677]/80">{copy.athlete.joinCta}</p>
           </div>

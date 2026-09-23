@@ -19,7 +19,7 @@ export default async function ProcessPage({
           {copy.processSteps.map((step) => (
             <li key={step.n} className="rounded-2xl border border-[#083677]/10 p-5">
               <p className="text-sm font-semibold text-[#083677]">{step.n}</p>
-              <h2 className="font-heading mt-2 text-lg font-semibold">{step.title}</h2>
+              <h2 className="font-heading mt-2 text-2xl font-semibold sm:text-3xl">{step.title}</h2>
               <p className="mt-2 text-sm leading-6 text-[#083677]/75">{step.body}</p>
             </li>
           ))}
