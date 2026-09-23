@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 import {
   Carousel,
   CarouselContent,
@@ -13,13 +14,18 @@ export function TravelPhotoCarousel({
   photos,
   previousLabel,
   nextLabel,
+  className,
 }: {
   photos: readonly string[];
   previousLabel: string;
   nextLabel: string;
+  className?: string;
 }) {
   return (
-    <Carousel opts={{ loop: true, align: "start" }} className="mt-6 w-full max-w-2xl">
+    <Carousel
+      opts={{ loop: true, align: "start" }}
+      className={cn("mt-6 w-full max-w-2xl", className)}
+    >
       <CarouselContent>
         {photos.map((src) => (
           <CarouselItem key={src}>
