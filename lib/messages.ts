@@ -241,6 +241,20 @@ export const messages = {
             "Cataratas de Nauyaca, en la zona de Dominical, Puntarenas.",
           activities: ["Cataratas", "Pozas", "Caminata"],
         },
+        tortuguero: {
+          description:
+            "Pueblo y parque nacional en la costa caribeña de Limón. Canales, selva y playas de anidación de tortugas.",
+          activities: ["Canales", "Parque nacional", "Playas de tortugas"],
+        },
+        "puerto-viejo": {
+          description: "Pueblo de playa en Talamanca, Limón, en el Caribe sur.",
+          activities: ["Playa", "Pueblo", "Caribe sur"],
+        },
+        "golfo-dulce": {
+          description:
+            "Golfo en el Pacífico sur, entre la península de Osa y el continente.",
+          activities: ["Golfo", "Península de Osa", "Pacífico sur"],
+        },
       },
       bookNow: "Reservar",
       inquireLead: "Email us para más información.",
@@ -543,6 +557,20 @@ export const messages = {
         nauyaca: {
           description: "Nauyaca waterfalls, in the Dominical area of Puntarenas.",
           activities: ["Waterfalls", "Pools", "Hike"],
+        },
+        tortuguero: {
+          description:
+            "A town and national park on the Caribbean coast of Limón. Canals, rainforest, and sea turtle nesting beaches.",
+          activities: ["Canals", "National park", "Turtle beaches"],
+        },
+        "puerto-viejo": {
+          description: "A beach town in Talamanca, Limón, on the southern Caribbean.",
+          activities: ["Beach", "Town", "South Caribbean"],
+        },
+        "golfo-dulce": {
+          description:
+            "A gulf on the southern Pacific, between the Osa Peninsula and the mainland.",
+          activities: ["Gulf", "Osa Peninsula", "South Pacific"],
         },
       },
       bookNow: "Book now",

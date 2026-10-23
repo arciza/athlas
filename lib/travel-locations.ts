@@ -6,7 +6,9 @@ export type TravelIcon =
   | "volcano"
   | "forest"
   | "crater"
-  | "wildlife";
+  | "wildlife"
+  | "palm"
+  | "fish";
 
 export type TravelLocation = {
   id: string;
@@ -16,6 +18,7 @@ export type TravelLocation = {
   label: "left" | "right" | "top" | "bottom";
   icon: TravelIcon;
   photos: readonly string[];
+  nudge?: { x: number; y: number };
 };
 
 const surfPhotos = [
@@ -41,6 +44,7 @@ export const travelLocations: TravelLocation[] = [
     label: "left",
     icon: "turtle",
     photos: verdiazulPhotos,
+    nudge: { x: 10, y: 22 },
   },
   {
     id: "tamarindo",
@@ -50,6 +54,7 @@ export const travelLocations: TravelLocation[] = [
     label: "left",
     icon: "surf",
     photos: surfPhotos,
+    nudge: { x: -22, y: -18 },
   },
   {
     id: "tilaran",
@@ -59,6 +64,7 @@ export const travelLocations: TravelLocation[] = [
     label: "left",
     icon: "wind",
     photos: [],
+    nudge: { x: -22, y: 0 },
   },
   {
     id: "rio-celeste",
@@ -68,6 +74,7 @@ export const travelLocations: TravelLocation[] = [
     label: "top",
     icon: "waterfall",
     photos: [],
+    nudge: { x: -6, y: -18 },
   },
   {
     id: "la-fortuna",
@@ -77,6 +84,7 @@ export const travelLocations: TravelLocation[] = [
     label: "right",
     icon: "volcano",
     photos: [],
+    nudge: { x: 20, y: -4 },
   },
   {
     id: "monteverde",
@@ -86,6 +94,7 @@ export const travelLocations: TravelLocation[] = [
     label: "bottom",
     icon: "forest",
     photos: [],
+    nudge: { x: 0, y: 20 },
   },
   {
     id: "irazu",
@@ -104,6 +113,7 @@ export const travelLocations: TravelLocation[] = [
     label: "left",
     icon: "wildlife",
     photos: [],
+    nudge: { x: -8, y: -6 },
   },
   {
     id: "nauyaca",
@@ -112,6 +122,34 @@ export const travelLocations: TravelLocation[] = [
     lon: -83.802,
     label: "right",
     icon: "waterfall",
+    photos: [],
+    nudge: { x: 12, y: 8 },
+  },
+  {
+    id: "tortuguero",
+    name: { es: "Tortuguero, Limón", en: "Tortuguero, Limón" },
+    lat: 10.541,
+    lon: -83.504,
+    label: "right",
+    icon: "turtle",
+    photos: [],
+  },
+  {
+    id: "puerto-viejo",
+    name: { es: "Puerto Viejo, Limón", en: "Puerto Viejo, Limón" },
+    lat: 9.656,
+    lon: -82.758,
+    label: "right",
+    icon: "palm",
+    photos: [],
+  },
+  {
+    id: "golfo-dulce",
+    name: { es: "Golfo Dulce", en: "Golfo Dulce" },
+    lat: 8.63,
+    lon: -83.28,
+    label: "left",
+    icon: "fish",
     photos: [],
   },
 ];

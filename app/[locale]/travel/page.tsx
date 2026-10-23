@@ -1,25 +1,10 @@
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
 import { TravelMap } from "@/components/travel-map";
-import { TravelPhotoCarousel } from "@/components/travel-photo-carousel";
 import { buttonVariants } from "@/components/ui/button";
 import { t } from "@/lib/messages";
 import { getLocale } from "@/lib/params";
 import { cn } from "@/lib/utils";
-
-const teamPhotos = [
-  "/media/travel/surfing.jpg",
-  "/media/travel/surf-boards.jpg",
-  "/media/travel/surf-lesson.jpg",
-  "/media/travel/surf-practice.jpg",
-] as const;
-
-const verdiazulPhotos = [
-  "/media/travel/turtle-briefing.jpg",
-  "/media/travel/beach-line.jpg",
-  "/media/travel/verdiazul-bin.jpg",
-  "/media/travel/verdiazul-fruit.jpg",
-] as const;
 
 export default async function TravelPage({
   params,
@@ -56,20 +41,6 @@ export default async function TravelPage({
         <div id="travel-map" className="mt-12 scroll-mt-24">
           <TravelMap locale={locale} />
         </div>
-
-        <h2 className="font-heading mt-12 text-3xl font-semibold sm:text-4xl">{copy.travel.slotTeamTitle}</h2>
-        <TravelPhotoCarousel
-          photos={teamPhotos}
-          previousLabel={locale === "es" ? "Foto anterior" : "Previous photo"}
-          nextLabel={locale === "es" ? "Foto siguiente" : "Next photo"}
-        />
-
-        <h2 className="font-heading mt-14 text-3xl font-semibold sm:text-4xl">{copy.travel.slotTurtlesTitle}</h2>
-        <TravelPhotoCarousel
-          photos={verdiazulPhotos}
-          previousLabel={locale === "es" ? "Foto anterior" : "Previous photo"}
-          nextLabel={locale === "es" ? "Foto siguiente" : "Next photo"}
-        />
       </section>
 
       <section id="travel-contact" className="scroll-mt-20 bg-[#083677] py-16 text-white">

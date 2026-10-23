@@ -3,6 +3,7 @@
 import { useState, type ComponentType } from "react";
 import {
   Droplets,
+  Fish,
   Mountain,
   MountainSnow,
   TreePalm,
@@ -38,6 +39,8 @@ const icons: Record<TravelIcon, ComponentType<LucideProps>> = {
   forest: Trees,
   crater: MountainSnow,
   wildlife: TreePalm,
+  palm: TreePalm,
+  fish: Fish,
 };
 
 function labelClass(location: TravelLocation) {
@@ -58,10 +61,10 @@ export function TravelMap({ locale }: { locale: Locale }) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const active = travelLocations.find((location) => location.id === activeId) ?? null;
   const place = active ? copy.travel.places[active.id as keyof typeof copy.travel.places] : null;
-  const nicaragua = projectLonLat(-85.1, 12.05);
+  const nicaragua = projectLonLat(-85.15, 11.36);
   const panama = projectLonLat(-81.95, 8.35);
   const pacific = projectLonLat(-86.55, 9.15);
-  const caribbean = projectLonLat(-82.35, 11.15);
+  const caribbean = projectLonLat(-82.2, 10.72);
 
   return (
     <div>
@@ -93,7 +96,9 @@ export function TravelMap({ locale }: { locale: Locale }) {
         </svg>
 
         {travelLocations.map((location) => {
-          const { x, y } = projectLonLat(location.lon, location.lat);
+          const point = projectLonLat(location.lon, location.lat);
+          const x = point.x + (location.nudge?.x ?? 0);
+          const y = point.y + (location.nudge?.y ?? 0);
           const Icon = icons[location.icon];
           const selected = location.id === activeId;
           return (
