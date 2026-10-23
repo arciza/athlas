@@ -61,10 +61,10 @@ export function TravelMap({ locale }: { locale: Locale }) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const active = travelLocations.find((location) => location.id === activeId) ?? null;
   const place = active ? copy.travel.places[active.id as keyof typeof copy.travel.places] : null;
-  const nicaragua = projectLonLat(-85.15, 11.36);
-  const panama = projectLonLat(-81.95, 8.35);
-  const pacific = projectLonLat(-86.55, 9.15);
-  const caribbean = projectLonLat(-82.2, 10.72);
+  const nicaragua = projectLonLat(-85.2, 11.28);
+  const panama = projectLonLat(-82.15, 8.22);
+  const pacific = projectLonLat(-86.35, 9.15);
+  const caribbean = projectLonLat(-82.35, 10.55);
 
   return (
     <div>
