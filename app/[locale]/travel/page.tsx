@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
 import { TravelPhotoCarousel } from "@/components/travel-photo-carousel";
@@ -8,10 +7,10 @@ import { getLocale } from "@/lib/params";
 import { cn } from "@/lib/utils";
 
 const teamPhotos = [
+  "/media/travel/surfing.jpg",
   "/media/travel/surf-boards.jpg",
   "/media/travel/surf-lesson.jpg",
   "/media/travel/surf-practice.jpg",
-  "/media/travel/surfing.jpg",
 ] as const;
 
 const verdiazulPhotos = [
@@ -20,42 +19,6 @@ const verdiazulPhotos = [
   "/media/travel/verdiazul-bin.jpg",
   "/media/travel/verdiazul-fruit.jpg",
 ] as const;
-
-function TravelPhoto({ src }: { src: string }) {
-  return (
-    <figure className="overflow-hidden rounded-2xl bg-[#ffffff]">
-      <div className="relative aspect-[3/4]">
-        <Image src={src} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-      </div>
-    </figure>
-  );
-}
-
-function TravelPhotos({
-  photos,
-  previousLabel,
-  nextLabel,
-}: {
-  photos: readonly string[];
-  previousLabel: string;
-  nextLabel: string;
-}) {
-  return (
-    <>
-      <TravelPhotoCarousel
-        className="md:hidden"
-        photos={photos}
-        previousLabel={previousLabel}
-        nextLabel={nextLabel}
-      />
-      <div className="mt-6 hidden gap-6 md:grid md:grid-cols-2">
-        {photos.map((src) => (
-          <TravelPhoto key={src} src={src} />
-        ))}
-      </div>
-    </>
-  );
-}
 
 export default async function TravelPage({
   params,
@@ -90,14 +53,14 @@ export default async function TravelPage({
         </div>
 
         <h2 className="font-heading mt-12 text-3xl font-semibold sm:text-4xl">{copy.travel.slotTeamTitle}</h2>
-        <TravelPhotos
+        <TravelPhotoCarousel
           photos={teamPhotos}
           previousLabel={locale === "es" ? "Foto anterior" : "Previous photo"}
           nextLabel={locale === "es" ? "Foto siguiente" : "Next photo"}
         />
 
         <h2 className="font-heading mt-14 text-3xl font-semibold sm:text-4xl">{copy.travel.slotTurtlesTitle}</h2>
-        <TravelPhotos
+        <TravelPhotoCarousel
           photos={verdiazulPhotos}
           previousLabel={locale === "es" ? "Foto anterior" : "Previous photo"}
           nextLabel={locale === "es" ? "Foto siguiente" : "Next photo"}
