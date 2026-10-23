@@ -1,5 +1,6 @@
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
+import { TravelMap } from "@/components/travel-map";
 import { TravelPhotoCarousel } from "@/components/travel-photo-carousel";
 import { buttonVariants } from "@/components/ui/button";
 import { t } from "@/lib/messages";
@@ -50,6 +51,10 @@ export default async function TravelPage({
         <div className="max-w-3xl space-y-4 text-[15px] leading-7 text-[#083677]/85">
           <p>{copy.travel.lead}</p>
           <p>{copy.travel.custom}</p>
+        </div>
+
+        <div id="travel-map" className="mt-12 scroll-mt-24">
+          <TravelMap locale={locale} />
         </div>
 
         <h2 className="font-heading mt-12 text-3xl font-semibold sm:text-4xl">{copy.travel.slotTeamTitle}</h2>

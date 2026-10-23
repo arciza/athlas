@@ -183,6 +183,10 @@ export const messages = {
       custom: "Cada viaje se arma con el entrenador o el staff del equipo.",
       slotTeamTitle: "Team building",
       slotTurtlesTitle: "Verdiazul",
+      mapTitle: "Actividades en Costa Rica",
+      mapLead:
+        "Toca un punto para ver fotos de lo que se puede hacer ahí. Cada viaje se arma con el entrenador o el staff del equipo.",
+      mapEmpty: "Aún no hay fotos de este lugar. Escríbenos y armamos el itinerario.",
       bookNow: "Reservar",
       inquireLead: "Email us para más información.",
       inquireCta: "travel@athlas.org",
@@ -431,6 +435,10 @@ export const messages = {
       custom: "Each trip is put together with the coach or the team staff.",
       slotTeamTitle: "Team building",
       slotTurtlesTitle: "Verdiazul",
+      mapTitle: "Activities in Costa Rica",
+      mapLead:
+        "Tap a pin to see photos of what a team can do there. Each trip is put together with the coach or the team staff.",
+      mapEmpty: "There are no photos for this place yet. Write to us and we will build the itinerary.",
       bookNow: "Book now",
       inquireLead: "Email us for more information.",
       inquireCta: "travel@athlas.org",
