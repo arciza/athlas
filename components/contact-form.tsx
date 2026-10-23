@@ -13,18 +13,20 @@ type Variant = "athlete" | "coach" | "travel";
 export function ContactForm({
   locale,
   variant,
-  subject,
 }: {
   locale: Locale;
   variant: Variant;
-  subject: string;
+  subject?: string;
 }) {
   const copy = t(locale);
-  const [status, setStatus] = useState<"idle" | "error" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "error" | "sendError" | "success">(
+    "idle"
+  );
 
-  function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const data = new FormData(form);
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
@@ -34,32 +36,55 @@ export function ContactForm({
       return;
     }
 
-    const extras =
-      variant === "athlete"
-        ? `${copy.form.country}: ${String(data.get("country") ?? "")}\n${copy.form.sport}: ${String(data.get("sport") ?? "")}\n${copy.form.phone}: ${String(data.get("phone") ?? "")}`
-        : variant === "travel"
-          ? `${copy.form.team}: ${String(data.get("team") ?? "")}\n${copy.form.sport}: ${String(data.get("sport") ?? "")}\n${copy.form.phone}: ${String(data.get("phone") ?? "")}`
-          : `${copy.form.institution}: ${String(data.get("institution") ?? "")}\n${copy.form.phone}: ${String(data.get("phone") ?? "")}`;
+    setStatus("sending");
 
-    const body = `${copy.form.name}: ${name}\n${copy.form.email}: ${email}\n${extras}\n\n${message}`;
-    const to = variant === "travel" ? "travel@athlas.org" : "info@athlas.org";
-    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setStatus("success");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          locale,
+          variant,
+          name,
+          email,
+          phone: String(data.get("phone") ?? "").trim(),
+          country: String(data.get("country") ?? "").trim(),
+          sport: String(data.get("sport") ?? "").trim(),
+          team: String(data.get("team") ?? "").trim(),
+          institution: String(data.get("institution") ?? "").trim(),
+          website: String(data.get("website") ?? "").trim(),
+          message,
+        }),
+      });
+      const payload = (await res.json().catch(() => null)) as { ok?: boolean } | null;
+      if (!res.ok || !payload?.ok) {
+        setStatus("sendError");
+        return;
+      }
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("sendError");
+    }
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid gap-4" noValidate>
+    <form onSubmit={onSubmit} className="relative grid gap-4" noValidate>
+      <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+        <Label htmlFor="website">Website</Label>
+        <Input id="website" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
       <div className="grid gap-2">
         <Label htmlFor="name">{copy.form.name}</Label>
-        <Input id="name" name="name" required className="h-10" />
+        <Input id="name" name="name" required className="h-10" autoComplete="name" />
       </div>
       <div className="grid gap-2">
         <Label htmlFor="email">{copy.form.email}</Label>
-        <Input id="email" name="email" type="email" required className="h-10" />
+        <Input id="email" name="email" type="email" required className="h-10" autoComplete="email" />
       </div>
       <div className="grid gap-2">
         <Label htmlFor="phone">{copy.form.phone}</Label>
-        <Input id="phone" name="phone" className="h-10" />
+        <Input id="phone" name="phone" className="h-10" autoComplete="tel" />
       </div>
       {variant === "athlete" ? (
         <>
@@ -98,13 +123,26 @@ export function ContactForm({
           {copy.apply.error}
         </p>
       ) : null}
+      {status === "sendError" ? (
+        <p role="alert" className="text-sm text-destructive">
+          {variant === "travel" ? copy.travel.sendError : copy.apply.sendError}
+        </p>
+      ) : null}
       {status === "success" ? (
         <p role="status" className="text-sm text-[#083677]">
           {variant === "travel" ? copy.travel.success : copy.apply.success}
         </p>
       ) : null}
-      <Button type="submit" className="h-10 bg-[#083677] text-white hover:bg-[#083677]/90">
-        {variant === "travel" ? copy.travel.formSubmit : copy.form.submit}
+      <Button
+        type="submit"
+        disabled={status === "sending"}
+        className="h-10 bg-[#083677] text-white hover:bg-[#083677]/90"
+      >
+        {status === "sending"
+          ? copy.form.sending
+          : variant === "travel"
+            ? copy.travel.formSubmit
+            : copy.form.submit}
       </Button>
     </form>
   );

@@ -30,8 +30,16 @@ Next.js, TypeScript, Tailwind CSS, and shadcn/ui. Body type is Poppins. Headings
 - How the process works
 - Sport scholarship guides (soccer, track, swimming, golf, basketball, baseball)
 - Foundation / donations (mailto; WordPress GiveWP checkout is not replicated)
-- Athlas Travel (custom Costa Rica trips for US teams; Book now / Reservar to travel@athlas.org)
+- Athlas Travel (custom Costa Rica trips for US teams; Book now / Reservar to the travel form)
 - Coaches inquiry form
 - FAQ and privacy policy
 
-Contact forms open a message to `info@athlas.org`. There is no payment processor and no WordPress admin in this repo.
+Contact forms POST to `/api/contact`. Travel inquiries go to `travel@athlas.org`; athlete and coach forms go to `info@athlas.org`. The submitter gets a short confirmation email.
+
+Mail is sent through Google Workspace SMTP. In Vercel (Production), add:
+
+- `CONTACT_SMTP_USER` — `travel@athlas.org` (or `info@athlas.org`)
+- `CONTACT_SMTP_PASS` — a Google App Password for that mailbox, not the normal login password
+- Optional: `CONTACT_SMTP_HOST` (default `smtp.gmail.com`) and `CONTACT_SMTP_PORT` (default `465`)
+
+Redeploy after saving the variables. Locally, submissions are logged if those variables are missing. There is no payment processor and no WordPress admin in this repo.

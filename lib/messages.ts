@@ -187,7 +187,9 @@ export const messages = {
       inquireLead: "Email us para más información.",
       inquireCta: "travel@athlas.org",
       formSubmit: "Enviar a travel@athlas.org",
-      success: "Se abrió tu correo con el mensaje listo para enviar a travel@athlas.org.",
+      success:
+        "Recibimos tu información. Te enviamos una confirmación a tu correo y el equipo de Athlas Travel te contactará en breve.",
+      sendError: "No se pudo enviar. Inténtalo de nuevo o escribe a travel@athlas.org.",
     },
     coaches: {
       title: "Para entrenadores",
@@ -201,7 +203,9 @@ export const messages = {
     apply: {
       title: "Inicia tu proceso ahora",
       lead: "Completa el formulario y escríbenos. Athlas recibe solicitudes dos veces al año, para los períodos de primavera y otoño.",
-      success: "Se abrió tu correo con el mensaje listo para enviar a info@athlas.org.",
+      success:
+        "Recibimos tu información. Te enviamos una confirmación a tu correo y el equipo de Athlas te contactará en breve.",
+      sendError: "No se pudo enviar. Inténtalo de nuevo o escribe a info@athlas.org.",
       error: "Completa los campos obligatorios para continuar.",
     },
     form: {
@@ -214,6 +218,7 @@ export const messages = {
       team: "Equipo o escuela",
       message: "Mensaje",
       submit: "Enviar a info@athlas.org",
+      sending: "Enviando…",
       required: "Obligatorio",
     },
     faq: {
@@ -432,7 +437,9 @@ export const messages = {
       inquireLead: "Email us for more information.",
       inquireCta: "travel@athlas.org",
       formSubmit: "Send to travel@athlas.org",
-      success: "Your email app opened with a message ready to send to travel@athlas.org.",
+      success:
+        "We received your information. We emailed you a confirmation, and the Athlas Travel team will contact you shortly.",
+      sendError: "The message could not be sent. Try again or email travel@athlas.org.",
     },
     coaches: {
       title: "For coaches",
@@ -446,7 +453,9 @@ export const messages = {
     apply: {
       title: "Start your process now",
       lead: "Complete the form and write to us. Athlas receives applications twice a year, for the spring and fall terms.",
-      success: "Your email app opened with a message ready to send to info@athlas.org.",
+      success:
+        "We received your information. We emailed you a confirmation, and the Athlas team will contact you shortly.",
+      sendError: "The message could not be sent. Try again or email info@athlas.org.",
       error: "Fill in the required fields to continue.",
       },
     form: {
@@ -459,6 +468,7 @@ export const messages = {
       team: "Team or school",
       message: "Message",
       submit: "Send to info@athlas.org",
+      sending: "Sending…",
       required: "Required",
     },
     faq: {
