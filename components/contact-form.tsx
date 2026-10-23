@@ -61,11 +61,18 @@ export function ContactForm({
         setStatus("sendError");
         return;
       }
-      form.reset();
       setStatus("success");
     } catch {
       setStatus("sendError");
     }
+  }
+
+  if (status === "success") {
+    return (
+      <p role="status" className="text-base leading-7 text-[#083677]">
+        {variant === "travel" ? copy.travel.success : copy.apply.success}
+      </p>
+    );
   }
 
   return (
@@ -126,11 +133,6 @@ export function ContactForm({
       {status === "sendError" ? (
         <p role="alert" className="text-sm text-destructive">
           {variant === "travel" ? copy.travel.sendError : copy.apply.sendError}
-        </p>
-      ) : null}
-      {status === "success" ? (
-        <p role="status" className="text-sm text-[#083677]">
-          {variant === "travel" ? copy.travel.success : copy.apply.success}
         </p>
       ) : null}
       <Button

@@ -187,8 +187,7 @@ export const messages = {
       inquireLead: "Email us para más información.",
       inquireCta: "travel@athlas.org",
       formSubmit: "Enviar a travel@athlas.org",
-      success:
-        "Recibimos tu información. Te enviamos una confirmación a tu correo y el equipo de Athlas Travel te contactará en breve.",
+      success: "Recibimos tu información. Te contactaremos en breve.",
       sendError: "No se pudo enviar. Inténtalo de nuevo o escribe a travel@athlas.org.",
     },
     coaches: {
@@ -203,8 +202,7 @@ export const messages = {
     apply: {
       title: "Inicia tu proceso ahora",
       lead: "Completa el formulario y escríbenos. Athlas recibe solicitudes dos veces al año, para los períodos de primavera y otoño.",
-      success:
-        "Recibimos tu información. Te enviamos una confirmación a tu correo y el equipo de Athlas te contactará en breve.",
+      success: "Recibimos tu información. Te contactaremos en breve.",
       sendError: "No se pudo enviar. Inténtalo de nuevo o escribe a info@athlas.org.",
       error: "Completa los campos obligatorios para continuar.",
     },
@@ -437,8 +435,7 @@ export const messages = {
       inquireLead: "Email us for more information.",
       inquireCta: "travel@athlas.org",
       formSubmit: "Send to travel@athlas.org",
-      success:
-        "We received your information. We emailed you a confirmation, and the Athlas Travel team will contact you shortly.",
+      success: "We have received your information and will be with you shortly.",
       sendError: "The message could not be sent. Try again or email travel@athlas.org.",
     },
     coaches: {
@@ -453,8 +450,7 @@ export const messages = {
     apply: {
       title: "Start your process now",
       lead: "Complete the form and write to us. Athlas receives applications twice a year, for the spring and fall terms.",
-      success:
-        "We received your information. We emailed you a confirmation, and the Athlas team will contact you shortly.",
+      success: "We have received your information and will be with you shortly.",
       sendError: "The message could not be sent. Try again or email info@athlas.org.",
       error: "Fill in the required fields to continue.",
       },
