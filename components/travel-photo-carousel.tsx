@@ -15,11 +15,13 @@ export function TravelPhotoCarousel({
   previousLabel,
   nextLabel,
   className,
+  compact = false,
 }: {
   photos: readonly string[];
   previousLabel: string;
   nextLabel: string;
   className?: string;
+  compact?: boolean;
 }) {
   return (
     <Carousel
@@ -30,7 +32,7 @@ export function TravelPhotoCarousel({
         {photos.map((src) => (
           <CarouselItem key={src}>
             <figure className="overflow-hidden rounded-2xl bg-[#ffffff]">
-              <div className="relative aspect-[3/4]">
+              <div className={cn("relative", compact ? "aspect-[5/4]" : "aspect-[3/4]")}>
                 <Image
                   src={src}
                   alt=""

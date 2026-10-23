@@ -190,6 +190,8 @@ export const messages = {
       mapActivities: "Actividades",
       oceanPacific: "Océano Pacífico",
       oceanCaribbean: "Mar Caribe",
+      countryNicaragua: "Nicaragua",
+      countryPanama: "Panamá",
       places: {
         junquillal: {
           description:
@@ -495,6 +497,8 @@ export const messages = {
       mapActivities: "Activities",
       oceanPacific: "Pacific Ocean",
       oceanCaribbean: "Caribbean Sea",
+      countryNicaragua: "Nicaragua",
+      countryPanama: "Panama",
       places: {
         junquillal: {
           description:
