@@ -185,8 +185,61 @@ export const messages = {
       slotTurtlesTitle: "Verdiazul",
       mapTitle: "Actividades en Costa Rica",
       mapLead:
-        "Toca un punto para ver fotos de lo que se puede hacer ahí. Cada viaje se arma con el entrenador o el staff del equipo.",
-      mapEmpty: "Aún no hay fotos de este lugar. Escríbenos y armamos el itinerario.",
+        "Toca el ícono de cada lugar para ver qué se puede hacer ahí. Cada viaje se arma con el entrenador o el staff del equipo.",
+      mapEmpty: "Aún no hay fotos de este lugar. Las subiremos pronto.",
+      mapActivities: "Actividades",
+      oceanPacific: "Océano Pacífico",
+      oceanCaribbean: "Mar Caribe",
+      places: {
+        junquillal: {
+          description:
+            "Playa en Santa Cruz, Guanacaste. Costa abierta y un tramo conocido por el anidamiento de tortugas.",
+          activities: [
+            "Voluntariado con tortugas en Verdiazul",
+            "Playa y tiempo en el pueblo",
+          ],
+        },
+        tamarindo: {
+          description:
+            "Pueblo de playa en Guanacaste, en la costa del Pacífico. Un punto clásico para surf y trabajo de equipo en la arena.",
+          activities: ["Surf", "Team building en la playa", "Sesiones en el agua"],
+        },
+        tilaran: {
+          description:
+            "Pueblo de Guanacaste junto al lago Arenal. Zona de viento, lago y campo.",
+          activities: ["Lago Arenal", "Salidas al campo", "Miradores"],
+        },
+        "rio-celeste": {
+          description:
+            "Río y catarata de agua turquesa en el Parque Nacional Volcán Tenorio.",
+          activities: ["Catarata Río Celeste", "Senderos del parque", "Pozas"],
+        },
+        "la-fortuna": {
+          description:
+            "Pueblo al pie del volcán Arenal. Base para volcán, cataratas y aguas termales.",
+          activities: ["Vistas del volcán Arenal", "Catarata La Fortuna", "Aguas termales"],
+        },
+        monteverde: {
+          description:
+            "Bosque nuboso en la cordillera de Tilarán. Puentes, senderos y vida silvestre.",
+          activities: ["Bosque nuboso", "Puentes colgantes", "Senderos"],
+        },
+        irazu: {
+          description:
+            "El volcán más alto de Costa Rica, en Cartago. Cráter y vistas del valle.",
+          activities: ["Cráter del Irazú", "Miradores", "Parque nacional"],
+        },
+        "manuel-antonio": {
+          description:
+            "Parque nacional en la costa del Pacífico de Puntarenas. Playas, senderos y fauna.",
+          activities: ["Playas del parque", "Senderos", "Vida silvestre"],
+        },
+        nauyaca: {
+          description:
+            "Cataratas de Nauyaca, en la zona de Dominical, Puntarenas.",
+          activities: ["Cataratas", "Pozas", "Caminata"],
+        },
+      },
       bookNow: "Reservar",
       inquireLead: "Email us para más información.",
       inquireCta: "travel@athlas.org",
@@ -437,8 +490,57 @@ export const messages = {
       slotTurtlesTitle: "Verdiazul",
       mapTitle: "Activities in Costa Rica",
       mapLead:
-        "Tap a pin to see photos of what a team can do there. Each trip is put together with the coach or the team staff.",
-      mapEmpty: "There are no photos for this place yet. Write to us and we will build the itinerary.",
+        "Tap the icon for each place to see what a team can do there. Each trip is put together with the coach or the team staff.",
+      mapEmpty: "There are no photos for this place yet. We will add them soon.",
+      mapActivities: "Activities",
+      oceanPacific: "Pacific Ocean",
+      oceanCaribbean: "Caribbean Sea",
+      places: {
+        junquillal: {
+          description:
+            "A beach in Santa Cruz, Guanacaste. Open Pacific coast and a stretch known for sea turtle nesting.",
+          activities: ["Turtle volunteering at Verdiazul", "Beach time", "Time in town"],
+        },
+        tamarindo: {
+          description:
+            "A beach town in Guanacaste on the Pacific. A classic spot for surf and team work on the sand.",
+          activities: ["Surf", "Beach team building", "Water sessions"],
+        },
+        tilaran: {
+          description:
+            "A Guanacaste town by Lake Arenal. Wind, lake, and countryside.",
+          activities: ["Lake Arenal", "Countryside outings", "Lookouts"],
+        },
+        "rio-celeste": {
+          description:
+            "A turquoise river and waterfall in Tenorio Volcano National Park.",
+          activities: ["Río Celeste waterfall", "Park trails", "Pools"],
+        },
+        "la-fortuna": {
+          description:
+            "A town at the foot of Arenal Volcano. A base for the volcano, waterfalls, and hot springs.",
+          activities: ["Arenal Volcano views", "La Fortuna waterfall", "Hot springs"],
+        },
+        monteverde: {
+          description:
+            "Cloud forest in the Tilarán range. Bridges, trails, and wildlife.",
+          activities: ["Cloud forest", "Hanging bridges", "Trails"],
+        },
+        irazu: {
+          description:
+            "Costa Rica’s highest volcano, in Cartago. Crater and valley views.",
+          activities: ["Irazú crater", "Lookouts", "National park"],
+        },
+        "manuel-antonio": {
+          description:
+            "A national park on the Pacific coast of Puntarenas. Beaches, trails, and wildlife.",
+          activities: ["Park beaches", "Trails", "Wildlife"],
+        },
+        nauyaca: {
+          description: "Nauyaca waterfalls, in the Dominical area of Puntarenas.",
+          activities: ["Waterfalls", "Pools", "Hike"],
+        },
+      },
       bookNow: "Book now",
       inquireLead: "Email us for more information.",
       inquireCta: "travel@athlas.org",

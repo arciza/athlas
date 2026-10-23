@@ -1,17 +1,32 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ComponentType } from "react";
+import {
+  Droplets,
+  Mountain,
+  MountainSnow,
+  TreePalm,
+  Trees,
+  Turtle,
+  WavesHorizontal,
+  Wind,
+  type LucideProps,
+} from "lucide-react";
 import { TravelPhotoCarousel } from "@/components/travel-photo-carousel";
 import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-} from "@/components/ui/sheet";
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import type { Locale } from "@/lib/i18n";
 import { t } from "@/lib/messages";
-import { travelLocations, type TravelLocation } from "@/lib/travel-locations";
+import {
+  travelLocations,
+  type TravelIcon,
+  type TravelLocation,
+} from "@/lib/travel-locations";
 
 const LON_MIN = -85.941725;
 const LON_MAX = -82.546196;
@@ -61,6 +76,17 @@ const outline: [number, number][] = [
   [-82.965783, 8.225028],
 ];
 
+const icons: Record<TravelIcon, ComponentType<LucideProps>> = {
+  turtle: Turtle,
+  surf: WavesHorizontal,
+  wind: Wind,
+  waterfall: Droplets,
+  volcano: Mountain,
+  forest: Trees,
+  crater: MountainSnow,
+  wildlife: TreePalm,
+};
+
 function project(lon: number, lat: number) {
   const innerW = WIDTH - PAD_X * 2;
   const innerH = HEIGHT - PAD_Y * 2;
@@ -71,121 +97,128 @@ function project(lon: number, lat: number) {
 }
 
 function outlinePath() {
-  return outline
+  return `${outline
     .map(([lon, lat], index) => {
       const { x, y } = project(lon, lat);
       return `${index === 0 ? "M" : "L"} ${x.toFixed(1)} ${y.toFixed(1)}`;
     })
-    .join(" ");
+    .join(" ")} Z`;
 }
 
-function labelPoint(location: TravelLocation, x: number, y: number) {
+function labelClass(location: TravelLocation) {
   switch (location.label) {
     case "left":
-      return { x: x - 16, y: y + 4, anchor: "end" as const };
+      return "right-full mr-2 top-1/2 -translate-y-1/2 text-right";
     case "right":
-      return { x: x + 16, y: y + 4, anchor: "start" as const };
+      return "left-full ml-2 top-1/2 -translate-y-1/2 text-left";
     case "top":
-      return { x, y: y - 20, anchor: "middle" as const };
+      return "bottom-full mb-2 left-1/2 -translate-x-1/2 text-center";
     case "bottom":
-      return { x, y: y + 24, anchor: "middle" as const };
+      return "top-full mt-2 left-1/2 -translate-x-1/2 text-center";
   }
 }
 
 export function TravelMap({ locale }: { locale: Locale }) {
   const copy = t(locale);
   const [activeId, setActiveId] = useState<string | null>(null);
-  const land = useMemo(() => `${outlinePath()} Z`, []);
+  const land = useMemo(() => outlinePath(), []);
   const active = travelLocations.find((location) => location.id === activeId) ?? null;
+  const place = active ? copy.travel.places[active.id as keyof typeof copy.travel.places] : null;
 
   return (
     <div>
       <h2 className="font-heading text-3xl font-semibold sm:text-4xl">{copy.travel.mapTitle}</h2>
       <p className="mt-3 max-w-3xl text-[15px] leading-7 text-[#083677]/85">{copy.travel.mapLead}</p>
 
-      <div className="mt-8 overflow-hidden rounded-[28px] bg-[#d7eef8] ring-1 ring-[#083677]/10">
+      <div className="relative mt-8 overflow-hidden rounded-[28px] bg-[#e7f3f8] ring-1 ring-[#083677]/10">
         <svg
           viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
           role="img"
           aria-label={copy.travel.mapTitle}
           className="h-auto w-full"
         >
-          <path d={land} fill="#247360" />
-          {travelLocations.map((location) => {
-            const { x, y } = project(location.lon, location.lat);
-            const label = labelPoint(location, x, y);
-            const selected = location.id === activeId;
-            return (
-              <g key={location.id}>
-                <text
-                  x={label.x}
-                  y={label.y}
-                  textAnchor={label.anchor}
-                  className="font-heading"
-                  fill="#b8283f"
-                  fontSize="18"
-                  fontWeight="700"
-                >
-                  {location.name[locale]}
-                </text>
-                <circle cx={x} cy={y} r={selected ? 15 : 13} fill="#ffffff" />
-                <circle cx={x} cy={y} r={selected ? 7 : 6} fill="#b8283f" />
-                <circle
-                  cx={x}
-                  cy={y}
-                  r="22"
-                  fill="transparent"
-                  className="cursor-pointer"
-                  onClick={() => setActiveId(location.id)}
-                >
-                  <title>{location.name[locale]}</title>
-                </circle>
-              </g>
-            );
-          })}
+          <path d={land} fill="#8fbc5a" stroke="#6f9d3f" strokeWidth="3" strokeLinejoin="round" />
+          <text
+            x="70"
+            y="430"
+            className="font-heading"
+            fill="#7aa7b8"
+            fontSize="18"
+            transform="rotate(-90 70 430)"
+          >
+            {copy.travel.oceanPacific}
+          </text>
+          <text x="620" y="90" className="font-heading" fill="#7aa7b8" fontSize="18">
+            {copy.travel.oceanCaribbean}
+          </text>
         </svg>
-      </div>
 
-      <ul className="mt-5 flex flex-wrap gap-2">
-        {travelLocations.map((location) => (
-          <li key={location.id}>
+        {travelLocations.map((location) => {
+          const { x, y } = project(location.lon, location.lat);
+          const Icon = icons[location.icon];
+          const selected = location.id === activeId;
+          return (
             <button
+              key={location.id}
               type="button"
               onClick={() => setActiveId(location.id)}
-              className="rounded-full bg-[#083677]/6 px-3 py-1.5 text-sm font-medium text-[#083677] hover:bg-[#083677]/12"
+              className="absolute -translate-x-1/2 -translate-y-1/2"
+              style={{ left: `${(x / WIDTH) * 100}%`, top: `${(y / HEIGHT) * 100}%` }}
+              aria-label={location.name[locale]}
             >
-              {location.name[locale]}
+              <span
+                className={`flex size-12 items-center justify-center rounded-full bg-white text-[#083677] shadow-md ring-1 ring-[#083677]/10 ${
+                  selected ? "ring-2 ring-[#b8283f]" : ""
+                }`}
+              >
+                <Icon className="size-6" strokeWidth={1.75} />
+              </span>
+              <span
+                className={`absolute whitespace-nowrap font-heading text-xs font-semibold tracking-wide text-[#3d4a2a] uppercase sm:text-sm ${labelClass(location)}`}
+              >
+                {location.name[locale]}
+              </span>
             </button>
-          </li>
-        ))}
-      </ul>
+          );
+        })}
+      </div>
 
-      <Sheet open={active !== null} onOpenChange={(open) => !open && setActiveId(null)}>
-        <SheetContent side="bottom" className="max-h-[90vh] overflow-y-auto sm:max-w-none">
-          {active ? (
+      <Dialog open={active !== null} onOpenChange={(open) => !open && setActiveId(null)}>
+        <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-xl">
+          {active && place ? (
             <>
-              <SheetHeader>
-                <SheetTitle className="font-heading text-3xl font-semibold text-[#083677]">
+              <DialogHeader>
+                <DialogTitle className="font-heading text-3xl font-semibold text-[#083677]">
                   {active.name[locale]}
-                </SheetTitle>
-                <SheetDescription>{copy.travel.mapLead}</SheetDescription>
-              </SheetHeader>
-              <div className="px-4 pb-6">
-                {active.photos.length > 0 ? (
-                  <TravelPhotoCarousel
-                    className="mt-0 max-w-none"
-                    photos={active.photos}
-                    previousLabel={locale === "es" ? "Foto anterior" : "Previous photo"}
-                    nextLabel={locale === "es" ? "Foto siguiente" : "Next photo"}
-                  />
-                ) : (
-                  <p className="text-[15px] leading-7 text-[#083677]/85">{copy.travel.mapEmpty}</p>
-                )}
+                </DialogTitle>
+                <DialogDescription className="text-[15px] leading-7 text-[#083677]/85">
+                  {place.description}
+                </DialogDescription>
+              </DialogHeader>
+              <div>
+                <p className="font-heading text-xl font-semibold text-[#083677]">
+                  {copy.travel.mapActivities}
+                </p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-[15px] leading-7 text-[#083677]/85">
+                  {place.activities.map((activity) => (
+                    <li key={activity}>{activity}</li>
+                  ))}
+                </ul>
               </div>
+              {active.photos.length > 0 ? (
+                <TravelPhotoCarousel
+                  className="mt-0 max-w-none"
+                  photos={active.photos}
+                  previousLabel={locale === "es" ? "Foto anterior" : "Previous photo"}
+                  nextLabel={locale === "es" ? "Foto siguiente" : "Next photo"}
+                />
+              ) : (
+                <p className="text-[15px] leading-7 text-[#083677]/85">{copy.travel.mapEmpty}</p>
+              )}
             </>
           ) : null}
-        </SheetContent>
-      </Sheet>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

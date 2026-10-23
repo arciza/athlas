@@ -1,9 +1,20 @@
+export type TravelIcon =
+  | "turtle"
+  | "surf"
+  | "wind"
+  | "waterfall"
+  | "volcano"
+  | "forest"
+  | "crater"
+  | "wildlife";
+
 export type TravelLocation = {
   id: string;
   name: { es: string; en: string };
   lat: number;
   lon: number;
   label: "left" | "right" | "top" | "bottom";
+  icon: TravelIcon;
   photos: readonly string[];
 };
 
@@ -28,6 +39,7 @@ export const travelLocations: TravelLocation[] = [
     lat: 10.146,
     lon: -85.772,
     label: "left",
+    icon: "turtle",
     photos: verdiazulPhotos,
   },
   {
@@ -36,6 +48,7 @@ export const travelLocations: TravelLocation[] = [
     lat: 10.299,
     lon: -85.837,
     label: "left",
+    icon: "surf",
     photos: surfPhotos,
   },
   {
@@ -44,6 +57,7 @@ export const travelLocations: TravelLocation[] = [
     lat: 10.473,
     lon: -84.967,
     label: "left",
+    icon: "wind",
     photos: [],
   },
   {
@@ -52,6 +66,7 @@ export const travelLocations: TravelLocation[] = [
     lat: 10.705,
     lon: -84.995,
     label: "top",
+    icon: "waterfall",
     photos: [],
   },
   {
@@ -60,6 +75,7 @@ export const travelLocations: TravelLocation[] = [
     lat: 10.471,
     lon: -84.645,
     label: "right",
+    icon: "volcano",
     photos: [],
   },
   {
@@ -68,6 +84,7 @@ export const travelLocations: TravelLocation[] = [
     lat: 10.319,
     lon: -84.825,
     label: "bottom",
+    icon: "forest",
     photos: [],
   },
   {
@@ -76,6 +93,7 @@ export const travelLocations: TravelLocation[] = [
     lat: 9.979,
     lon: -83.852,
     label: "right",
+    icon: "crater",
     photos: [],
   },
   {
@@ -84,6 +102,7 @@ export const travelLocations: TravelLocation[] = [
     lat: 9.39,
     lon: -84.137,
     label: "left",
+    icon: "wildlife",
     photos: [],
   },
   {
@@ -92,6 +111,7 @@ export const travelLocations: TravelLocation[] = [
     lat: 9.261,
     lon: -83.802,
     label: "right",
+    icon: "waterfall",
     photos: [],
   },
 ];
