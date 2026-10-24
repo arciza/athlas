@@ -62,7 +62,7 @@ export function TravelMap({ locale }: { locale: Locale }) {
   const active = travelLocations.find((location) => location.id === activeId) ?? null;
   const place = active ? copy.travel.places[active.id as keyof typeof copy.travel.places] : null;
   const nicaragua = projectLonLat(-85.2, 11.28);
-  const panama = projectLonLat(-82.15, 8.22);
+  const panama = projectLonLat(-82.48, 8.47);
   const pacific = projectLonLat(-86.35, 9.15);
   const caribbean = projectLonLat(-82.35, 10.55);
 
@@ -80,7 +80,7 @@ export function TravelMap({ locale }: { locale: Locale }) {
         >
           <path d={MAP.nicaragua} fill="#ddd4c6" stroke="#8a7f70" strokeWidth="1.1" strokeLinejoin="round" />
           <path d={MAP.panama} fill="#ddd4c6" stroke="#8a7f70" strokeWidth="1.1" strokeLinejoin="round" />
-          <path d={MAP.costaRica} fill="#c4c4c4" stroke="#4a4a4a" strokeWidth="1.6" strokeLinejoin="round" />
+          <path d={MAP.costaRica} fill="#3f8f6d" stroke="#246b50" strokeWidth="1.6" strokeLinejoin="round" />
           <text x={nicaragua.x} y={nicaragua.y} textAnchor="middle" fill="#8a8a8a" fontSize="16" className="font-heading">
             {copy.travel.countryNicaragua}
           </text>
